@@ -13,6 +13,32 @@
       "references": [],
       "isValid": true,
       "validationErrors": []
+    },
+    "019dfa14-cec0-7cb8-9fa4-11103ec28c0f": {
+      "id": "019dfa14-cec0-7cb8-9fa4-11103ec28c0f",
+      "title": "New Project",
+      "author": "Andrew Needham",
+      "phase": "Generate Concepts",
+      "createdAt": "2026-05-05T21:39:20.896Z",
+      "updatedAt": "2026-05-05T21:39:32.192Z",
+      "filename": "data/entries/019dfa14-cec0-7cb8-9fa4-11103ec28c0f.json",
+      "resources": {},
+      "references": [],
+      "isValid": true,
+      "validationErrors": []
+    },
+    "019dfa14-fad2-75ca-ad5a-efae7e2f363b": {
+      "id": "019dfa14-fad2-75ca-ad5a-efae7e2f363b",
+      "title": "New Project 2",
+      "author": "Andrew Needham",
+      "phase": "Develop Solution",
+      "createdAt": "2026-05-05T21:39:32.178Z",
+      "updatedAt": "2026-05-05T21:39:41.804Z",
+      "filename": "data/entries/019dfa14-fad2-75ca-ad5a-efae7e2f363b.json",
+      "resources": {},
+      "references": [],
+      "isValid": true,
+      "validationErrors": []
     }
   },
   "projectId": "21fba045ae83d50e1ddf85e90784d79e",
