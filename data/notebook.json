@@ -1,16 +1,20 @@
 {
   "version": 3,
   "entries": {
-    "019df694-333f-72f5-aef3-03ddb144ac46": {
-      "id": "019df694-333f-72f5-aef3-03ddb144ac46",
-      "title": "Test",
+    "019df842-477c-7c08-b0b6-4fe6e3ecb3db": {
+      "id": "019df842-477c-7c08-b0b6-4fe6e3ecb3db",
+      "title": "Two",
       "author": "Andrew Needham",
-      "phase": "Define Problem",
-      "createdAt": "2026-05-05T05:20:00.831Z",
-      "updatedAt": "2026-05-05T05:20:08.929Z",
-      "filename": "data/entries/019df694-333f-72f5-aef3-03ddb144ac46.json",
+      "phase": "Generate Concepts",
+      "createdAt": "2026-05-05T13:09:46.492Z",
+      "updatedAt": "2026-05-05T13:21:45.253Z",
+      "filename": "data/entries/019df842-477c-7c08-b0b6-4fe6e3ecb3db.json",
       "resources": {},
-      "isValid": true
+      "references": [],
+      "isValid": true,
+      "validationErrors": []
     }
-  }
+  },
+  "projectId": "21fba045ae83d50e1ddf85e90784d79e",
+  "projectName": "notebook"
 }
