@@ -29,6 +29,21 @@
         "Missing title",
         "Missing phase"
       ]
+    },
+    "019dfa11-53e8-7a8f-8a78-8c4034d33eab": {
+      "id": "019dfa11-53e8-7a8f-8a78-8c4034d33eab",
+      "title": "New 3",
+      "author": "Andrew Needham",
+      "phase": "",
+      "createdAt": "2026-05-05T21:35:32.840Z",
+      "updatedAt": "2026-05-05T21:35:35.956Z",
+      "filename": "data/entries/019dfa11-53e8-7a8f-8a78-8c4034d33eab.json",
+      "resources": {},
+      "references": [],
+      "isValid": false,
+      "validationErrors": [
+        "Missing phase"
+      ]
     }
   },
   "projectId": "21fba045ae83d50e1ddf85e90784d79e",
