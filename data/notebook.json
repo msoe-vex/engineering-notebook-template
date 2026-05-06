@@ -58,6 +58,19 @@
       "references": [],
       "isValid": true,
       "validationErrors": []
+    },
+    "019dfbdd-eeb3-79fd-9f44-3bae1987941a": {
+      "id": "019dfbdd-eeb3-79fd-9f44-3bae1987941a",
+      "title": "New Project",
+      "author": "Andrew Needham",
+      "phase": "Define Problem",
+      "createdAt": "2026-05-06T05:58:39.027Z",
+      "updatedAt": "2026-05-06T05:58:58.035Z",
+      "filename": "data/entries/019dfbdd-eeb3-79fd-9f44-3bae1987941a.json",
+      "resources": {},
+      "references": [],
+      "isValid": true,
+      "validationErrors": []
     }
   },
   "projectId": "21fba045ae83d50e1ddf85e90784d79e",
