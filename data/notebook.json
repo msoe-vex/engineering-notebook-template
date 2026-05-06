@@ -58,21 +58,6 @@
       "references": [],
       "isValid": true,
       "validationErrors": []
-    },
-    "019dfeee-2859-7513-b610-b83d0609a762": {
-      "id": "019dfeee-2859-7513-b610-b83d0609a762",
-      "title": "",
-      "author": "Andrew Needham",
-      "phase": "",
-      "createdAt": "2026-05-06T20:15:14.009Z",
-      "updatedAt": "2026-05-06T20:15:14.009Z",
-      "filename": "data/entries/019dfeee-2859-7513-b610-b83d0609a762.json",
-      "resources": {},
-      "isValid": false,
-      "validationErrors": [
-        "Missing title",
-        "Missing phase"
-      ]
     }
   },
   "projectId": "b8bfda490872934f4644aa72070c4be7",
