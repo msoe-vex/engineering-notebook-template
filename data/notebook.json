@@ -26,7 +26,7 @@
       "author": "Andrew Needham",
       "phase": "Generate Concepts",
       "createdAt": "2026-05-06T05:35:55.020Z",
-      "updatedAt": "2026-05-06T05:52:20.815Z",
+      "updatedAt": "2026-05-06T20:53:24.272Z",
       "filename": "data/entries/019dfbc9-1e8c-7a23-b0d9-3728f5c45e8c.json",
       "resources": {
         "019dfbca-7bf1-770d-b222-c77ff3ccb5b2": {
@@ -37,6 +37,11 @@
         "019dfbca-96b7-715f-aaaa-b3b021d97aeb": {
           "title": "Raider robotics",
           "caption": "Raider robotics",
+          "type": "image"
+        },
+        "019dff10-fb05-705a-9adc-522f9862cd97": {
+          "title": "Andrew Needham",
+          "caption": "cap",
           "type": "image"
         }
       },
