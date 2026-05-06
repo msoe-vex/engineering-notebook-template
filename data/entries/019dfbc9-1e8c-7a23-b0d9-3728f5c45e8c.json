@@ -149,6 +149,20 @@
         }
       },
       {
+        "type": "image",
+        "attrs": {
+          "src": "data/assets/8b10ba28e0b0f3827e9c3f2b2394cda811f15986d63be6b4c1c530703197a285.png",
+          "alt": "",
+          "title": "Andrew Needham",
+          "width": "42%",
+          "height": null,
+          "id": "019dff12-6aae-7bdb-b156-29873f6e3dd6",
+          "initials": "",
+          "filePath": "data/assets/8b10ba28e0b0f3827e9c3f2b2394cda811f15986d63be6b4c1c530703197a285.png",
+          "caption": "cap"
+        }
+      },
+      {
         "type": "paragraph"
       }
     ]
