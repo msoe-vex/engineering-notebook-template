@@ -59,20 +59,22 @@
       "isValid": true,
       "validationErrors": []
     },
-    "019dfbdd-eeb3-79fd-9f44-3bae1987941a": {
-      "id": "019dfbdd-eeb3-79fd-9f44-3bae1987941a",
-      "title": "New Project",
+    "019dfeee-2859-7513-b610-b83d0609a762": {
+      "id": "019dfeee-2859-7513-b610-b83d0609a762",
+      "title": "",
       "author": "Andrew Needham",
-      "phase": "Define Problem",
-      "createdAt": "2026-05-06T05:58:39.027Z",
-      "updatedAt": "2026-05-06T05:58:58.035Z",
-      "filename": "data/entries/019dfbdd-eeb3-79fd-9f44-3bae1987941a.json",
+      "phase": "",
+      "createdAt": "2026-05-06T20:15:14.009Z",
+      "updatedAt": "2026-05-06T20:15:14.009Z",
+      "filename": "data/entries/019dfeee-2859-7513-b610-b83d0609a762.json",
       "resources": {},
-      "references": [],
-      "isValid": true,
-      "validationErrors": []
+      "isValid": false,
+      "validationErrors": [
+        "Missing title",
+        "Missing phase"
+      ]
     }
   },
-  "projectId": "21fba045ae83d50e1ddf85e90784d79e",
-  "projectName": "notebook"
+  "projectId": "b8bfda490872934f4644aa72070c4be7",
+  "projectName": "msoe-vex/engineering-notebook-template"
 }
