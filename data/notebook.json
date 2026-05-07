@@ -1,23 +1,6 @@
 {
   "version": 3,
   "entries": {
-    "019dffd4-962e-7592-bd30-e149e383e130": {
-      "id": "019dffd4-962e-7592-bd30-e149e383e130",
-      "title": "Project 2",
-      "author": "Andrew Needham",
-      "phase": "Generate Concepts",
-      "createdAt": "2026-05-06T23:28:50.234Z",
-      "updatedAt": "2026-05-07T00:58:43.272Z",
-      "filename": "data/entries/019dffd4-962e-7592-bd30-e149e383e130.json",
-      "resources": {},
-      "isValid": true,
-      "validationErrors": [],
-      "references": [
-        "019dffd4-962e-71e8-a39f-6e23a842592e",
-        "019dffd4-962e-75ff-b600-7a1a9a2a9de1",
-        "019dffd4-962e-7fe6-9686-9b155d88c62c"
-      ]
-    },
     "019dffd4-962e-7c03-8a1c-bd9e1462c553": {
       "id": "019dffd4-962e-7c03-8a1c-bd9e1462c553",
       "title": "Project 1",
@@ -47,6 +30,31 @@
       "validationErrors": [],
       "references": []
     }
+  },
+  "team": {
+    "teamName": "Raider Robotics",
+    "teamNumber": "MSOE",
+    "startDate": "September 1, 2023",
+    "endDate": "April 30, 2024",
+    "organization": "Milwaukee School of Engineering",
+    "logo": "data/assets/61878c1f0040d1adf131fade8fadab2b8493f1938e446a720ffa59238f924f5e.png",
+    "members": [
+      {
+        "name": "Alice Smith",
+        "role": "Lead Engineer",
+        "image": null
+      },
+      {
+        "name": "Bob Jones",
+        "role": "Software Lead",
+        "image": null
+      },
+      {
+        "name": "Charlie Brown",
+        "role": "CAD Designer",
+        "image": null
+      }
+    ]
   },
   "projectId": "21fba045ae83d50e1ddf85e90784d79e",
   "projectName": "notebook"

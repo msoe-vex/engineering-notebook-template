@@ -104,39 +104,68 @@
 \newcommand{\@projectenddate}{}
 \newcommand{\@organization}{}
 \newcommand{\@teammembers}{}
+\newcommand{\@teamlogo}{}
 
-\newcommand{\teamname}[1]{\renewcommand{\@teamname}{#1}}
-\newcommand{\teamnumber}[1]{\renewcommand{\@teamnumber}{#1}}
+\newcommand{\teamname}[1]{\gdef\@teamname{#1}}
+\newcommand{\teamnumber}[1]{\gdef\@teamnumber{#1}}
 \newcommand{\notebooknumber}[1]{\renewcommand{\@notebooknumber}{#1}}
-\newcommand{\startdate}[1]{\renewcommand{\@startdate}{#1}}
-\newcommand{\projectenddate}[1]{\renewcommand{\@projectenddate}{#1}}
-\newcommand{\organization}[1]{\renewcommand{\@organization}{#1}}
-\newcommand{\teammembers}[1]{\renewcommand{\@teammembers}{#1}}
+\newcommand{\startdate}[1]{\gdef\@startdate{#1}}
+\newcommand{\projectenddate}[1]{\gdef\@projectenddate{#1}}
+\newcommand{\organization}[1]{\gdef\@organization{#1}}
+\newcommand{\teammembers}[1]{\gdef\@teammembers{#1}}
+\newcommand{\teamlogo}[1]{\gdef\@teamlogo{#1}}
 
-% Title Page Generation
+% Member formatting command
+\newcommand{\teammember}[3]{%
+    \begin{minipage}[t]{0.45\linewidth}
+        \centering
+        \vspace{0.5cm}
+        \begin{adjustbox}{minipage=[c][6cm][c]{5cm}, clip}
+            \centering
+            \ifx&#3&\else
+                \adjustbox{min size={5cm}{6cm}}{\includegraphics{#3}}
+            \fi
+        \end{adjustbox}\par
+        \vspace{0.3cm}
+        {\large\textbf{#1}}\par
+        {\small\textit{#2}}\par
+        \vspace{0.5cm}
+    \end{minipage}
+}
+
 % Title Page Generation
 \newcommand{\maketeamtitle}{
     \thispagestyle{empty}
     \begin{center}
         \vspace*{2cm}
-        {\Huge \textbf{\@teamname} \par}
+        {\Huge \@teamname \par}
         \vspace{1cm}
         {\huge \@teamnumber \par}
         \vspace{2cm}
-        {\Large \textbf{Engineering Notebook} \par}
+        {\LARGE Engineering Notebook\par}
         \vspace{0.5cm}
-        {\large Notebook Number: \@notebooknumber \par}
-        \vspace{2cm}
-        {\large \textbf{Date:} \@startdate{} -- \@projectenddate{} \par}
+        {\Large \@startdate{} -- \@projectenddate\par}
         \vspace{2cm}
         {\Large \textbf{Organization:} \@organization \par}
-        \vspace{2cm}
-        {\Large \textbf{Team Members:} \par}
-        \vspace{0.5cm}
-        {\large \@teammembers \par}
         \vfill
+        \begin{center}
+            \ifx\@teamlogo\@empty\else
+                \includegraphics[width=4cm]{\@teamlogo}
+            \fi
+        \end{center}
+        \vspace{1cm}
     \end{center}
+    \clearpage
+}
+
+% Team Page Generation
+\newcommand{\teampage}{
     \newpage
+    \section*{Meet the Team}
+    \begin{center}
+        \@teammembers
+    \end{center}
+    \clearpage
 }
 
 % Fancy header
@@ -180,9 +209,9 @@
 % Command to start a new entry
 % Usage: \newentry{Title}{Date}{Author}{Phase}
 % Phases: Define Problem, Generate Concepts, Develop Solution, Construct and Test, Evaluate Solution
-\newcommand{\notebookentry}[4]{
-    \newpage
-    \renewcommand{\@entrytitle}{#1}
+\newcommand{\notebookentry}[4]{%
+    \clearpage
+    \gdef\@entrytitle{#1}%
     \renewcommand{\@entrydate}{#2}
     \renewcommand{\@entryauthor}{#3}
     \renewcommand{\@entryphase}{#4}
@@ -297,23 +326,23 @@
         showstringspaces=false,
         tabsize=2,
         keywords=[1]{%
-            alignas, alignof, and, and_eq, asm, atomic_cancel, atomic_commit, atomic_noexcept, auto,
-            bitand, bitor, bool, break, case, catch, char, char16_t, char32_t, class, compl, concept,
-            const, constexpr, const_cast, continue, co_await, co_return, co_yield, decltype, default,
-            delete, do, double, dynamic_cast, else, enum, explicit, export, extern, false, float,
-            for, friend, goto, if, import, inline, int, long, module, mutable, namespace, new,
-            noexcept, not, not_eq, nullptr, operator, or, or_eq, private, protected, public,
-            reflexpr, register, reinterpret_cast, requires, return, short, signed, sizeof,
-            static, static_assert, static_cast, struct, switch, synchronized, template, this,
-            thread_local, throw, true, try, typedef, typeid, typename, union, unsigned, using,
-            virtual, void, volatile, wchar_t, while, xor, xor_eq
-        },
+                alignas, alignof, and, and_eq, asm, atomic_cancel, atomic_commit, atomic_noexcept, auto,
+                bitand, bitor, bool, break, case, catch, char, char16_t, char32_t, class, compl, concept,
+                const, constexpr, const_cast, continue, co_await, co_return, co_yield, decltype, default,
+                delete, do, double, dynamic_cast, else, enum, explicit, export, extern, false, float,
+                for, friend, goto, if, import, inline, int, long, module, mutable, namespace, new,
+                noexcept, not, not_eq, nullptr, operator, or, or_eq, private, protected, public,
+                reflexpr, register, reinterpret_cast, requires, return, short, signed, sizeof,
+                static, static_assert, static_cast, struct, switch, synchronized, template, this,
+                thread_local, throw, true, try, typedef, typeid, typename, union, unsigned, using,
+                virtual, void, volatile, wchar_t, while, xor, xor_eq
+            },
         keywordstyle=[1]\color{codekeyword}\bfseries,
         keywords=[2]{%
-            string, vector, map, set, pair, tuple, unique_ptr, shared_ptr, weak_ptr,
-            make_unique, make_shared, cout, cin, endl, cerr, clog, size_t,
-            uint8_t, uint16_t, uint32_t, uint64_t, int8_t, int16_t, int32_t, int64_t
-        },
+                string, vector, map, set, pair, tuple, unique_ptr, shared_ptr, weak_ptr,
+                make_unique, make_shared, cout, cin, endl, cerr, clog, size_t,
+                uint8_t, uint16_t, uint32_t, uint64_t, int8_t, int16_t, int32_t, int64_t
+            },
         keywordstyle=[2]\color{codetype},
         moredelim=[l][\color{codedirective}]{\#},
     }%
