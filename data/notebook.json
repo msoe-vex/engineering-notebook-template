@@ -22,7 +22,7 @@
       "author": "Andrew Needham",
       "phase": "Define Problem",
       "createdAt": "2026-05-06T23:20:55.031Z",
-      "updatedAt": "2026-05-07T03:32:43.308Z",
+      "updatedAt": "2026-05-07T03:39:07.113Z",
       "filename": "data/entries/019e007e-afdf-7ebf-a01c-9059ba1c902b.json",
       "resources": {
         "019e007e-afdf-7347-a6e9-f9853fe7e0e9": {
@@ -43,7 +43,32 @@
       },
       "isValid": true,
       "validationErrors": [],
-      "references": []
+      "references": [],
+      "assets": [
+        "data/assets/65be25f1837b9047da393c5d7a56bb9b721b63a3e21f83239cafdeaf3afd4866.png"
+      ]
+    },
+    "019e0082-efa0-780f-9e54-1953d5907a7b": {
+      "id": "019e0082-efa0-780f-9e54-1953d5907a7b",
+      "title": "Project 3",
+      "author": "Andrew Needham",
+      "phase": "Develop Solution",
+      "createdAt": "2026-05-07T03:37:21.568Z",
+      "updatedAt": "2026-05-07T03:37:47.283Z",
+      "filename": "data/entries/019e0082-efa0-780f-9e54-1953d5907a7b.json",
+      "resources": {
+        "019e0083-2533-7cb4-9848-208e7bc3b45a": {
+          "title": "VEX CAD",
+          "caption": "cad",
+          "type": "image"
+        }
+      },
+      "isValid": true,
+      "validationErrors": [],
+      "references": [],
+      "assets": [
+        "data/assets/2ddf277ef44e6b54a396054233d29a050962b6d9c2fd5e84e178862a53e39091.png"
+      ]
     }
   },
   "team": {
@@ -72,5 +97,16 @@
     ]
   },
   "projectId": "21fba045ae83d50e1ddf85e90784d79e",
-  "projectName": "notebook"
+  "projectName": "notebook",
+  "assetRefs": {
+    "data/assets/61878c1f0040d1adf131fade8fadab2b8493f1938e446a720ffa59238f924f5e.png": [
+      "team"
+    ],
+    "data/assets/65be25f1837b9047da393c5d7a56bb9b721b63a3e21f83239cafdeaf3afd4866.png": [
+      "019e007e-afdf-7ebf-a01c-9059ba1c902b"
+    ],
+    "data/assets/2ddf277ef44e6b54a396054233d29a050962b6d9c2fd5e84e178862a53e39091.png": [
+      "019e0082-efa0-780f-9e54-1953d5907a7b"
+    ]
+  }
 }
