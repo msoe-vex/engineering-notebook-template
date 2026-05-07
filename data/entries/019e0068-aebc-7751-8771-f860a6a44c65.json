@@ -20,12 +20,9 @@
         "content": [
           {
             "type": "text",
-            "text": "This is a sentence. This is a sentence. This is a sentence. This is a sentence. This is a sentence. This is a sentence. This is a sentence. This is a sentence. This is a sentence. This is a sentence. This is a sentence. This is a sentence. This is a sentence. This is a sentence. This is a sentence. This is a sentence. This is a sentence. This is a sentence. This is a sentence. This is a sentence. This is a sentence. This is a sentence. This is a sentence. This is a sentence."
+            "text": "This is a sentence. This is a sentence. This is a sentence. This is a sentence. This is a sentence. This is a sentence. This is a sentence. This is a sentence. This is a sentence. This is a sentence. This is a sentence. This is a sentence. This is a sentence. This is a sentence. This is a sentence. This is a sentence. This is a sentence. This is a sentence. This is a sentence. This is a sentence. This is a sentence. This is a sentence. This is a sentence. This is a sentence. "
           }
         ]
-      },
-      {
-        "type": "paragraph"
       },
       {
         "type": "heading",
@@ -142,9 +139,6 @@
             "text": " This is a sentence. This is a sentence. This is a sentence. This is a sentence. This is a sentence. This is a sentence. This is a sentence. This is a sentence. This is a sentence. This is a sentence. This is a sentence."
           }
         ]
-      },
-      {
-        "type": "paragraph"
       },
       {
         "type": "bulletList",
@@ -313,9 +307,6 @@
         ]
       },
       {
-        "type": "paragraph"
-      },
-      {
         "type": "paragraph",
         "content": [
           {
@@ -325,20 +316,264 @@
         ]
       },
       {
-        "type": "paragraph"
-      },
-      {
         "type": "codeBlock",
         "attrs": {
           "language": "cpp",
-          "id": "019dffd4-962e-7fe6-9686-9b155d88c62c",
+          "id": "019e0068-aebc-73d7-9598-9f3bc662f469",
           "caption": "This code runs the main function.",
           "title": "Main function"
         },
         "content": [
           {
             "type": "text",
-            "text": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Car {\n  public:\n    string brand;\n    int year;\n\n    // A method (function inside a class)\n    void displayInfo() {\n        cout << brand << \" (\" << year << \")\" << endl;\n    }\n};\n\nint main() {\n    Car myCar; // Create an object of Car\n    myCar.brand = \"Toyota\";\n    myCar.year = 2024;\n    \n    myCar.displayInfo(); // Call the method\n    return 0;\n}"
+            "text": "int main(){\n    return 0;\n}"
+          }
+        ]
+      },
+      {
+        "type": "bulletList",
+        "content": [
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "More words"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph"
+              },
+              {
+                "type": "table",
+                "attrs": {
+                  "id": "019e0068-aebc-72b8-8814-7791eb58bc9a",
+                  "caption": "This table shows results",
+                  "title": "Results table"
+                },
+                "content": [
+                  {
+                    "type": "tableRow",
+                    "content": [
+                      {
+                        "type": "tableCell",
+                        "attrs": {
+                          "colspan": 1,
+                          "rowspan": 1,
+                          "colwidth": null,
+                          "align": null
+                        },
+                        "content": [
+                          {
+                            "type": "paragraph",
+                            "content": [
+                              {
+                                "type": "text",
+                                "marks": [
+                                  {
+                                    "type": "bold"
+                                  }
+                                ],
+                                "text": "Column 1"
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "type": "tableCell",
+                        "attrs": {
+                          "colspan": 1,
+                          "rowspan": 1,
+                          "colwidth": null,
+                          "align": null
+                        },
+                        "content": [
+                          {
+                            "type": "paragraph",
+                            "content": [
+                              {
+                                "type": "text",
+                                "marks": [
+                                  {
+                                    "type": "bold"
+                                  }
+                                ],
+                                "text": "Column 2"
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "type": "tableCell",
+                        "attrs": {
+                          "colspan": 1,
+                          "rowspan": 1,
+                          "colwidth": null,
+                          "align": null
+                        },
+                        "content": [
+                          {
+                            "type": "paragraph",
+                            "content": [
+                              {
+                                "type": "text",
+                                "marks": [
+                                  {
+                                    "type": "bold"
+                                  }
+                                ],
+                                "text": "Column 3"
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "tableRow",
+                    "content": [
+                      {
+                        "type": "tableCell",
+                        "attrs": {
+                          "colspan": 1,
+                          "rowspan": 1,
+                          "colwidth": null,
+                          "align": null
+                        },
+                        "content": [
+                          {
+                            "type": "paragraph",
+                            "content": [
+                              {
+                                "type": "text",
+                                "text": "One"
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "type": "tableCell",
+                        "attrs": {
+                          "colspan": 1,
+                          "rowspan": 1,
+                          "colwidth": null,
+                          "align": null
+                        },
+                        "content": [
+                          {
+                            "type": "paragraph",
+                            "content": [
+                              {
+                                "type": "text",
+                                "text": "Two"
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "type": "tableCell",
+                        "attrs": {
+                          "colspan": 1,
+                          "rowspan": 1,
+                          "colwidth": null,
+                          "align": null
+                        },
+                        "content": [
+                          {
+                            "type": "paragraph",
+                            "content": [
+                              {
+                                "type": "text",
+                                "text": "Three"
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "tableRow",
+                    "content": [
+                      {
+                        "type": "tableCell",
+                        "attrs": {
+                          "colspan": 1,
+                          "rowspan": 1,
+                          "colwidth": null,
+                          "align": null
+                        },
+                        "content": [
+                          {
+                            "type": "paragraph",
+                            "content": [
+                              {
+                                "type": "text",
+                                "text": "Four"
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "type": "tableCell",
+                        "attrs": {
+                          "colspan": 1,
+                          "rowspan": 1,
+                          "colwidth": null,
+                          "align": null
+                        },
+                        "content": [
+                          {
+                            "type": "paragraph",
+                            "content": [
+                              {
+                                "type": "text",
+                                "text": "Five"
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "type": "tableCell",
+                        "attrs": {
+                          "colspan": 1,
+                          "rowspan": 1,
+                          "colwidth": null,
+                          "align": null
+                        },
+                        "content": [
+                          {
+                            "type": "paragraph",
+                            "content": [
+                              {
+                                "type": "text",
+                                "text": "Six"
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
           }
         ]
       },
@@ -350,241 +585,6 @@
             "text": "More words"
           }
         ]
-      },
-      {
-        "type": "table",
-        "attrs": {
-          "id": "019dffd4-962e-75ff-b600-7a1a9a2a9de1",
-          "caption": "This table shows results",
-          "title": "Results table"
-        },
-        "content": [
-          {
-            "type": "tableRow",
-            "content": [
-              {
-                "type": "tableCell",
-                "attrs": {
-                  "colspan": 1,
-                  "rowspan": 1,
-                  "colwidth": null,
-                  "align": null
-                },
-                "content": [
-                  {
-                    "type": "paragraph",
-                    "content": [
-                      {
-                        "type": "text",
-                        "marks": [
-                          {
-                            "type": "bold"
-                          }
-                        ],
-                        "text": "Column 1"
-                      }
-                    ]
-                  }
-                ]
-              },
-              {
-                "type": "tableCell",
-                "attrs": {
-                  "colspan": 1,
-                  "rowspan": 1,
-                  "colwidth": null,
-                  "align": null
-                },
-                "content": [
-                  {
-                    "type": "paragraph",
-                    "content": [
-                      {
-                        "type": "text",
-                        "marks": [
-                          {
-                            "type": "bold"
-                          }
-                        ],
-                        "text": "Column 2"
-                      }
-                    ]
-                  }
-                ]
-              },
-              {
-                "type": "tableCell",
-                "attrs": {
-                  "colspan": 1,
-                  "rowspan": 1,
-                  "colwidth": null,
-                  "align": null
-                },
-                "content": [
-                  {
-                    "type": "paragraph",
-                    "content": [
-                      {
-                        "type": "text",
-                        "marks": [
-                          {
-                            "type": "bold"
-                          }
-                        ],
-                        "text": "Column 3"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "type": "tableRow",
-            "content": [
-              {
-                "type": "tableCell",
-                "attrs": {
-                  "colspan": 1,
-                  "rowspan": 1,
-                  "colwidth": null,
-                  "align": null
-                },
-                "content": [
-                  {
-                    "type": "paragraph",
-                    "content": [
-                      {
-                        "type": "text",
-                        "text": "One"
-                      }
-                    ]
-                  }
-                ]
-              },
-              {
-                "type": "tableCell",
-                "attrs": {
-                  "colspan": 1,
-                  "rowspan": 1,
-                  "colwidth": null,
-                  "align": null
-                },
-                "content": [
-                  {
-                    "type": "paragraph",
-                    "content": [
-                      {
-                        "type": "text",
-                        "text": "Two"
-                      }
-                    ]
-                  }
-                ]
-              },
-              {
-                "type": "tableCell",
-                "attrs": {
-                  "colspan": 1,
-                  "rowspan": 1,
-                  "colwidth": null,
-                  "align": null
-                },
-                "content": [
-                  {
-                    "type": "paragraph",
-                    "content": [
-                      {
-                        "type": "text",
-                        "text": "Three"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "type": "tableRow",
-            "content": [
-              {
-                "type": "tableCell",
-                "attrs": {
-                  "colspan": 1,
-                  "rowspan": 1,
-                  "colwidth": null,
-                  "align": null
-                },
-                "content": [
-                  {
-                    "type": "paragraph",
-                    "content": [
-                      {
-                        "type": "text",
-                        "text": "Four"
-                      }
-                    ]
-                  }
-                ]
-              },
-              {
-                "type": "tableCell",
-                "attrs": {
-                  "colspan": 1,
-                  "rowspan": 1,
-                  "colwidth": null,
-                  "align": null
-                },
-                "content": [
-                  {
-                    "type": "paragraph",
-                    "content": [
-                      {
-                        "type": "text",
-                        "text": "Five"
-                      }
-                    ]
-                  }
-                ]
-              },
-              {
-                "type": "tableCell",
-                "attrs": {
-                  "colspan": 1,
-                  "rowspan": 1,
-                  "colwidth": null,
-                  "align": null
-                },
-                "content": [
-                  {
-                    "type": "paragraph",
-                    "content": [
-                      {
-                        "type": "text",
-                        "text": "Six"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "type": "paragraph"
-      },
-      {
-        "type": "paragraph",
-        "content": [
-          {
-            "type": "text",
-            "text": "More words"
-          }
-        ]
-      },
-      {
-        "type": "paragraph"
       },
       {
         "type": "image",
@@ -594,13 +594,10 @@
           "title": "RR",
           "width": "100%",
           "height": null,
-          "id": "019dffd4-962e-71e8-a39f-6e23a842592e",
+          "id": "019e0068-aebc-7a16-a4d8-2e078bb077d9",
           "filePath": "data/assets/65be25f1837b9047da393c5d7a56bb9b721b63a3e21f83239cafdeaf3afd4866.png",
           "caption": "RR"
         }
-      },
-      {
-        "type": "paragraph"
       },
       {
         "type": "paragraph",

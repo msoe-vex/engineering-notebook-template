@@ -1,26 +1,41 @@
 {
   "version": 3,
   "entries": {
-    "019dffd4-962e-7c03-8a1c-bd9e1462c553": {
-      "id": "019dffd4-962e-7c03-8a1c-bd9e1462c553",
+    "019e0068-aebc-79b8-b666-0396ed0b6a4d": {
+      "id": "019e0068-aebc-79b8-b666-0396ed0b6a4d",
+      "title": "Project 2",
+      "author": "Andrew Needham",
+      "phase": "Define Problem",
+      "createdAt": "2026-05-06T23:28:50.234Z",
+      "updatedAt": "2026-05-07T03:08:41.021Z",
+      "filename": "data/entries/019e0068-aebc-79b8-b666-0396ed0b6a4d.json",
+      "resources": {},
+      "isValid": true,
+      "validationErrors": [],
+      "references": [
+        "019e0068-aebc-7a16-a4d8-2e078bb077d9"
+      ]
+    },
+    "019e0068-aebc-7751-8771-f860a6a44c65": {
+      "id": "019e0068-aebc-7751-8771-f860a6a44c65",
       "title": "Project 1",
       "author": "Andrew Needham",
       "phase": "Define Problem",
       "createdAt": "2026-05-06T23:20:55.031Z",
-      "updatedAt": "2026-05-07T01:25:08.277Z",
-      "filename": "data/entries/019dffd4-962e-7c03-8a1c-bd9e1462c553.json",
+      "updatedAt": "2026-05-07T03:08:41.847Z",
+      "filename": "data/entries/019e0068-aebc-7751-8771-f860a6a44c65.json",
       "resources": {
-        "019dffd4-962e-7fe6-9686-9b155d88c62c": {
+        "019e0068-aebc-73d7-9598-9f3bc662f469": {
           "title": "Main function",
           "caption": "This code runs the main function.",
           "type": "codeBlock"
         },
-        "019dffd4-962e-75ff-b600-7a1a9a2a9de1": {
+        "019e0068-aebc-72b8-8814-7791eb58bc9a": {
           "title": "Results table",
           "caption": "This table shows results",
           "type": "table"
         },
-        "019dffd4-962e-71e8-a39f-6e23a842592e": {
+        "019e0068-aebc-7a16-a4d8-2e078bb077d9": {
           "title": "RR",
           "caption": "RR",
           "type": "image"
