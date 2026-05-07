@@ -1,0 +1,123 @@
+{
+  "version": 3,
+  "content": {
+    "type": "doc",
+    "content": [
+      {
+        "type": "heading",
+        "attrs": {
+          "level": 1
+        },
+        "content": [
+          {
+            "type": "text",
+            "text": "Header 1"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "This is a sentence. This is a sentence. This is a sentence. This is a sentence. This is a sentence. This is a sentence. This is a sentence. This is a sentence. This is a sentence. This is a sentence. This is a sentence. This is a sentence. This is a sentence. This is a sentence. This is a sentence. This is a sentence. This is a sentence. This is a sentence. This is a sentence. This is a sentence. This is a sentence. This is a sentence. This is a sentence. This is a sentence."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "This is a "
+          },
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "link",
+                "attrs": {
+                  "href": "#019dffd4-962e-71e8-a39f-6e23a842592e",
+                  "target": "_blank",
+                  "rel": "noopener noreferrer nofollow",
+                  "class": "text-nb-primary hover:underline hover:decoration-nb-primary transition-all cursor-text",
+                  "title": null,
+                  "resourceId": "019dffd4-962e-71e8-a39f-6e23a842592e",
+                  "entryId": "019dffd4-962e-7c03-8a1c-bd9e1462c553"
+                }
+              },
+              {
+                "type": "underline"
+              }
+            ],
+            "text": "link"
+          },
+          {
+            "type": "text",
+            "text": " to the Raider Robotics logo."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "link",
+                "attrs": {
+                  "href": "#019dffd4-962e-75ff-b600-7a1a9a2a9de1",
+                  "target": "_blank",
+                  "rel": "noopener noreferrer nofollow",
+                  "class": "text-nb-primary hover:underline hover:decoration-nb-primary transition-all cursor-text",
+                  "title": null,
+                  "resourceId": "019dffd4-962e-75ff-b600-7a1a9a2a9de1",
+                  "entryId": "019dffd4-962e-7c03-8a1c-bd9e1462c553"
+                }
+              },
+              {
+                "type": "underline"
+              }
+            ],
+            "text": "Link"
+          },
+          {
+            "type": "text",
+            "text": " to code."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "link",
+                "attrs": {
+                  "href": "#019dffd4-962e-7fe6-9686-9b155d88c62c",
+                  "target": "_blank",
+                  "rel": "noopener noreferrer nofollow",
+                  "class": "text-nb-primary hover:underline hover:decoration-nb-primary transition-all cursor-text",
+                  "title": null,
+                  "resourceId": "019dffd4-962e-7fe6-9686-9b155d88c62c",
+                  "entryId": "019dffd4-962e-7c03-8a1c-bd9e1462c553"
+                }
+              },
+              {
+                "type": "underline"
+              }
+            ],
+            "text": "Link"
+          },
+          {
+            "type": "text",
+            "text": " to table."
+          }
+        ]
+      }
+    ]
+  }
+}

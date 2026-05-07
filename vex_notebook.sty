@@ -14,6 +14,31 @@
 \RequirePackage{ifthen}
 \RequirePackage[export]{adjustbox}
 \RequirePackage{listings}
+\RequirePackage{caption}
+\RequirePackage{cleveref}
+\RequirePackage{letltxmacro}
+\RequirePackage{etoolbox}
+
+% Global Caption Styling
+\captionsetup{
+    font=small,
+    labelfont=bf,
+    justification=centering,
+    singlelinecheck=false
+}
+
+% Cleveref configuration for references
+\crefname{figure}{Figure}{Figures}
+\Crefname{figure}{Figure}{Figures}
+\crefname{table}{Table}{Tables}
+\Crefname{table}{Table}{Tables}
+\crefname{lstlisting}{Code}{Codes}
+\Crefname{lstlisting}{Code}{Codes}
+\crefname{listing}{Code}{Codes}
+\Crefname{listing}{Code}{Codes}
+
+% Custom Block Header Command
+\newcommand{\blockheader}[2]{{\noindent\textbf{#1\if\relax\detokenize{#2}\relax\else: #2\fi}\par\nopagebreak\smallskip}}
 
 % Code Highlighting Setup
 \lstset{
@@ -38,6 +63,8 @@
     breaklines=true,
     breakatwhitespace=false,
     title=\lstname,
+    xleftmargin=18pt,
+    framexleftmargin=15pt,
     escapeinside={\%*}{*)}
 }
 
@@ -104,12 +131,29 @@
 \pagestyle{fancy}
 \fancyhf{}
 \fancyhead[L]{\@teamnumber\ - \@teamname}
-\fancyhead[R]{Page \thepage}
+\fancyhead[R]{\thepage}
 \fancyfoot[C]{}
 \renewcommand{\headrulewidth}{0.4pt}
 
-% Custom TOC format
+% TOC and Section Styling
+\setcounter{secnumdepth}{0} % Disable section numbering
+\setcounter{tocdepth}{3}    % Include subsections in TOC
 \renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+\renewcommand{\cftsubsecleader}{\cftdotfill{\cftdotsep}}
+\renewcommand{\cftsubsubsecleader}{\cftdotfill{\cftdotsep}}
+\setlength{\cftbeforesecskip}{1.2em}
+\renewcommand{\cftsecfont}{\bfseries}
+\renewcommand{\cftsecpagefont}{\bfseries}
+
+% Helper to get phase color
+\DeclareRobustCommand{\getphasecolor}[1]{%
+    \ifstrequal{#1}{Define Problem}{PhaseDefine}{%
+    \ifstrequal{#1}{Generate Concepts}{PhaseGenerate}{%
+    \ifstrequal{#1}{Develop Solution}{PhaseDevelop}{%
+    \ifstrequal{#1}{Construct and Test}{PhaseConstruct}{%
+    \ifstrequal{#1}{Evaluate Solution}{PhaseEvaluate}{%
+    PhaseDefault}}}}}%
+}
 
 % Commands to set current entry info
 \newcommand{\@entrytitle}{}
@@ -138,7 +182,13 @@
                     }}}}}
 
     \phantomsection
-    \addcontentsline{toc}{section}{#4 -- #1 (#2)}
+    \addcontentsline{toc}{section}{%
+        \texorpdfstring{%
+            \protect\colorbox{\getphasecolor{#4}}{\makebox[0pt][l]{\hspace{-3pt}\rule[-6pt]{0pt}{18pt}}}%
+            \hspace{6pt}%
+            \protect\parbox[t]{0.82\linewidth}{\textbf{#1}\newline\footnotesize \textcolor{gray}{#4 --- #3 (#2)}}%
+        }{#1}%
+    }
     \section*{#1}
     \vspace{-0.5cm}
 
@@ -182,19 +232,21 @@
     \subsection*{General Formatting}
     \begin{itemize}
         \item Keep entries in chronological order.
-        \item Ensure all figures have captions and the initials of the author.
+        \item Ensure all figures have captions.
         \item Provide detailed explanations for calculations, code logic, and design choices.
     \end{itemize}
     \newpage
 }
 
 % Easy image insertion
-% Usage: \image{filename}{caption}{initials}
+% Usage: \image{filename}{title}{caption}
 \newcommand{\image}[3]{
     \begin{figure}[htbp]
+        \refstepcounter{figure}
+        \blockheader{Figure \thefigure}{#2}
         \centering
         \includegraphics[max width=\textwidth, max height=0.4\textheight, keepaspectratio]{#1}
-        \caption{#2 (Initials: #3)}
+        \caption*{#3}
     \end{figure}
 }
 
@@ -203,43 +255,63 @@
 % \notebookentry{Title}{Date}{Author}{Phase}
 \newcommand{\notebookentry}[4]{\newentry{#1}{#2}{#3}{#4}}
 
-% \notebookimage{filename}{caption}{initials}{width_percent}{label}
+% \notebookimage{filename}{title}{caption}{width_percent}{label}
 \newcommand{\notebookimage}[5]{
     \begin{figure}[htbp]
+        \refstepcounter{figure}
+        \blockheader{Figure \thefigure}{#2}
+        \label{#5}
         \centering
         \includegraphics[width=#4, max height=0.4\textheight, keepaspectratio]{#1}
-        \caption{#2 (Initials: #3)}
-        \label{#5}
+        \caption*{#3}
     \end{figure}
 }
 
-% \notebooktable{columns}{content}{caption}{label}
-\newcommand{\notebooktable}[4]{\customtable{#1}{#2}{#3}{#4}}
+% \notebooktable{columns}{title}{content}{caption}{label}
+\newcommand{\notebooktable}[5]{\customtable{#1}{#2}{#3}{#4}{#5}}
 
-% \begin{notebookcodeblock}{language}{caption}{label} ... \end{notebookcodeblock}
-\newcommand{\notebookcodelabel}[1]{\addvspace{1em}\noindent\textbf{Snippet: #1}\par\nopagebreak\smallskip}
-\lstnewenvironment{notebookcodeblock}[3]%
+% \begin{notebookcodeblock}{language}{title}{caption}{label} ... \end{notebookcodeblock}
+\newcommand{\@currentcodecaption}{}
+\lstnewenvironment{notebookcodeblock}[4]%
 {%
-    \notebookcodelabel{#2}%
-    \label{#3}%
-    \lstset{language=#1, basicstyle=\small\ttfamily, breaklines=true}%
+    \renewcommand{\@currentcodecaption}{#3}%
+    \refstepcounter{lstlisting}%
+    \blockheader{Code \thelstlisting}{#2}%
+    \label{#4}%
+    \lstset{language=#1, basicstyle=\small\ttfamily, breaklines=true, belowskip=0pt}%
 }%
 {%
+    \nopagebreak
+    \vspace{-0.5em}
+    {\centering\small\@currentcodecaption\endgraf}%
     \addvspace{1em}%
 }
 
 % Easy table insertion
-% Usage: \customtable{columns (e.g. |c|c|)}{content}{caption}{label}
-\newcommand{\customtable}[4]{
+% Usage: \customtable{columns}{title}{content}{caption}{label}
+\newcommand{\customtable}[5]{
     \begin{table}[htbp]
+        \refstepcounter{table}
+        \blockheader{Table \thetable}{#2}
+        \label{#5}
         \centering
-        \caption{#3}
-        \label{#4}
-        \vspace{0.2cm}
         \begin{tabular}{#1}
             \hline
-            #2
+            #3
             \hline
         \end{tabular}
+        \caption*{#4}
     \end{table}
+}
+
+% Redefine \hyperref to include automatic reference markers
+\AtBeginDocument{
+    \LetLtxMacro{\oldhyperref}{\hyperref}
+    \DeclareRobustCommand{\hyperref}[2][]{%
+        \if\relax\detokenize{#1}\relax
+            \oldhyperref{#2}%
+        \else
+            \oldhyperref[#1]{#2} (\cref{#1})%
+        \fi
+    }
 }
