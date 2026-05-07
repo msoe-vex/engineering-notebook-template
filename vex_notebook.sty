@@ -78,12 +78,8 @@
 \setlength{\parskip}{0.8em}
 
 % Color mappings for project phases
-\definecolor{PhaseDefine}{HTML}{FFB3B3} % Light Red
-\definecolor{PhaseGenerate}{HTML}{FFD9B3} % Light Orange
-\definecolor{PhaseDevelop}{HTML}{FFFFB3} % Light Yellow
-\definecolor{PhaseConstruct}{HTML}{B3FFB3} % Light Green
-\definecolor{PhaseEvaluate}{HTML}{FFEBEE}
-\definecolor{PhaseDefault}{HTML}{FFFFFF}
+\input{data/phases.tex}
+\definecolor{PhaseDefault}{HTML}{94a3b8}
 
 % Code Highlighting Colors (GitHub Style)
 \definecolor{codekeyword}{RGB}{0, 92, 197}
@@ -178,7 +174,7 @@
 
 % TOC and Section Styling
 \newcounter{tocentrycount}
-\colorlet{toccolor-0}{PhaseDefault}
+\colorlet{toccolor-0}{white}
 \setcounter{secnumdepth}{0} % Disable section numbering
 \setcounter{tocdepth}{3}    % Include subsections in TOC
 \renewcommand{\cftsecleader}{\cftdotfill{1}}
@@ -210,16 +206,15 @@
   {-1.5ex}
   {}
 
-% Phase color mapping
-\csdef{phasecolor@Define Problem}{PhaseDefine}
-\csdef{phasecolor@Generate Concepts}{PhaseGenerate}
-\csdef{phasecolor@Develop Solution}{PhaseDevelop}
-\csdef{phasecolor@Construct and Test}{PhaseConstruct}
-\csdef{phasecolor@Evaluate Solution}{PhaseEvaluate}
 
 % Helper to get phase color (expandable)
 \newcommand{\getphasecolor}[1]{%
     \ifcsdef{phasecolor@#1}{\csuse{phasecolor@#1}}{PhaseDefault}%
+}
+
+% Helper to get phase name (expandable)
+\newcommand{\getphasename}[1]{%
+    \ifcsdef{phasename@#1}{\csuse{phasename@#1}}{#1}%
 }
 
 % Commands to set current entry info
@@ -229,24 +224,22 @@
 \newcommand{\@entryphase}{}
 \newcommand{\@entryphasecolor}{PhaseDefault}
 
+% Helper to render a phase in the legend
+\newcommand{\notebookphase}[3]{%
+    {\color{#1}\hrule height 6pt}\smallskip
+    \textbf{#2:} #3\par
+    \vspace{0.5cm}
+}
+
 % Command to start a new entry
-% Usage: \newentry{Title}{Date}{Author}{Phase}
-% Phases: Define Problem, Generate Concepts, Develop Solution, Construct and Test, Evaluate Solution
+% Usage: \newentry{Title}{Date}{Author}{PhaseID}
 \newcommand{\notebookentry}[4]{%
     \clearpage
     \gdef\@entrytitle{#1}%
     \renewcommand{\@entrydate}{#2}
     \renewcommand{\@entryauthor}{#3}
-    \renewcommand{\@entryphase}{#4}
-
-    % Determine color based on phase
-    \ifthenelse{\equal{#4}{Define Problem}}{\renewcommand{\@entryphasecolor}{PhaseDefine}}{
-        \ifthenelse{\equal{#4}{Generate Concepts}}{\renewcommand{\@entryphasecolor}{PhaseGenerate}}{
-            \ifthenelse{\equal{#4}{Develop Solution}}{\renewcommand{\@entryphasecolor}{PhaseDevelop}}{
-                \ifthenelse{\equal{#4}{Construct and Test}}{\renewcommand{\@entryphasecolor}{PhaseConstruct}}{
-                    \ifthenelse{\equal{#4}{Evaluate Solution}}{\renewcommand{\@entryphasecolor}{PhaseEvaluate}}{
-                        \renewcommand{\@entryphasecolor}{PhaseDefault}
-                    }}}}}
+    \renewcommand{\@entryphase}{\getphasename{#4}}
+    \renewcommand{\@entryphasecolor}{\getphasecolor{#4}}
 
     \stepcounter{tocentrycount}
     \edef\tempcolor{\getphasecolor{#4}}
@@ -278,25 +271,7 @@
 
     \vspace{1cm}
 
-    \vspace{0.5cm}
-    {\color{PhaseDefine}\hrule height 6pt}\smallskip
-    \textbf{Define Problem:} Identifying the core issue, setting SMART goals, outlining constraints and deliverables.
-    \vspace{0.5cm}
-
-    {\color{PhaseGenerate}\hrule height 6pt}\smallskip
-    \textbf{Generate Concepts:} Brainstorming, research, prototyping, and decision matrices to evaluate potential solutions.
-    \vspace{0.5cm}
-
-    {\color{PhaseDevelop}\hrule height 6pt}\smallskip
-    \textbf{Develop Solution:} Creating CAD, detailed sketches, math calculations, graphical models, and pseudocode.
-    \vspace{0.5cm}
-
-    {\color{PhaseConstruct}\hrule height 6pt}\smallskip
-    \textbf{Construct and Test:} Building the robot, writing the code, executing test plans, and gathering qualitative/quantitative data.
-    \vspace{0.5cm}
-
-    {\color{PhaseEvaluate}\hrule height 6pt}\smallskip
-    \textbf{Evaluate Solution:} Reflecting on constraints, event outcomes, and planning future improvements.
+    \phaselist
 
     \vspace{1cm}
     \subsection*{General Formatting}

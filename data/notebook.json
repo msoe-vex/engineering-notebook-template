@@ -5,9 +5,9 @@
       "id": "019e007e-afdf-725a-96ab-cffb68579dd2",
       "title": "Project 2",
       "author": "Andrew Needham",
-      "phase": "Generate Concepts",
+      "phase": 2,
       "createdAt": "2026-05-06T23:28:50.234Z",
-      "updatedAt": "2026-05-07T04:53:29.693Z",
+      "updatedAt": "2026-05-07T14:16:44.368Z",
       "filename": "data/entries/019e007e-afdf-725a-96ab-cffb68579dd2.json",
       "resources": {},
       "isValid": true,
@@ -21,9 +21,9 @@
       "id": "019e007e-afdf-7ebf-a01c-9059ba1c902b",
       "title": "Project 1",
       "author": "Andrew Needham",
-      "phase": "Define Problem",
+      "phase": 1,
       "createdAt": "2026-05-06T23:20:55.031Z",
-      "updatedAt": "2026-05-07T04:58:21.336Z",
+      "updatedAt": "2026-05-07T14:16:42.381Z",
       "filename": "data/entries/019e007e-afdf-7ebf-a01c-9059ba1c902b.json",
       "resources": {
         "019e007e-afdf-7347-a6e9-f9853fe7e0e9": {
@@ -53,9 +53,9 @@
       "id": "019e0082-efa0-780f-9e54-1953d5907a7b",
       "title": "Project 3",
       "author": "Andrew Needham",
-      "phase": "Develop Solution",
+      "phase": 3,
       "createdAt": "2026-05-07T03:37:21.568Z",
-      "updatedAt": "2026-05-07T03:40:28.451Z",
+      "updatedAt": "2026-05-07T14:16:47.146Z",
       "filename": "data/entries/019e0082-efa0-780f-9e54-1953d5907a7b.json",
       "resources": {
         "019e0083-2533-7cb4-9848-208e7bc3b45a": {
@@ -75,9 +75,9 @@
       "id": "019e0085-3da2-7017-8ab3-a8d5be83f179",
       "title": "Project 4",
       "author": "Andrew Needham",
-      "phase": "Construct and Test",
+      "phase": 4,
       "createdAt": "2026-05-07T03:39:52.609Z",
-      "updatedAt": "2026-05-07T03:40:10.705Z",
+      "updatedAt": "2026-05-07T14:16:49.333Z",
       "filename": "data/entries/019e0085-3da2-7017-8ab3-a8d5be83f179.json",
       "resources": {
         "019e0085-5346-76d6-b2e4-20b4f4c9d0e5": {
@@ -132,5 +132,42 @@
       "019e0082-efa0-780f-9e54-1953d5907a7b",
       "019e0085-3da2-7017-8ab3-a8d5be83f179"
     ]
-  }
+  },
+  "phases": [
+    {
+      "id": 1,
+      "name": "Define Problem",
+      "description": "Identifying the core issue, setting SMART goals, outlining constraints and deliverables.",
+      "iconName": "Goal",
+      "color": "#3b82f6"
+    },
+    {
+      "id": 2,
+      "name": "Generate Concepts",
+      "description": "Brainstorming, research, prototyping, and decision matrices to evaluate potential solutions.",
+      "iconName": "Brain",
+      "color": "#a855f7"
+    },
+    {
+      "id": 3,
+      "name": "Develop Solution",
+      "description": "Creating CAD, detailed sketches, math calculations, graphical models, and pseudocode.",
+      "iconName": "PencilRuler",
+      "color": "#6366f1"
+    },
+    {
+      "id": 4,
+      "name": "Construct and Test",
+      "description": "Building the robot, writing the code, executing test plans, and gathering qualitative/quantitative data.",
+      "iconName": "Hammer",
+      "color": "#f97316"
+    },
+    {
+      "id": 5,
+      "name": "Evaluate Solution",
+      "description": "Reflecting on constraints, event outcomes, and planning future improvements.",
+      "iconName": "SearchCheck",
+      "color": "#10b981"
+    }
+  ]
 }
