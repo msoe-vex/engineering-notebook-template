@@ -30,8 +30,27 @@ More words
 More words
 
 \begin{notebookcodeblock}{C++}{Main function}{This code runs the main function.}{019dffd4-962e-7fe6-9686-9b155d88c62c}
-int main(){
+#include <iostream>
+#include <string>
+using namespace std;
 
+class Car {
+  public:
+    string brand;
+    int year;
+
+    // A method (function inside a class)
+    void displayInfo() {
+        cout << brand << " (" << year << ")" << endl;
+    }
+};
+
+int main() {
+    Car myCar; // Create an object of Car
+    myCar.brand = "Toyota";
+    myCar.year = 2024;
+    
+    myCar.displayInfo(); // Call the method
     return 0;
 }
 \end{notebookcodeblock}

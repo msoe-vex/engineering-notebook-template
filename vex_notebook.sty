@@ -18,6 +18,9 @@
 \RequirePackage{cleveref}
 \RequirePackage{letltxmacro}
 \RequirePackage{etoolbox}
+\RequirePackage[scaled]{inter}
+\RequirePackage{inconsolata}
+\renewcommand{\familydefault}{\sfdefault}
 
 % Global Caption Styling
 \captionsetup{
@@ -109,7 +112,7 @@
         \vspace*{2cm}
         {\Huge \textbf{\@teamname} \par}
         \vspace{1cm}
-        {\huge Team \@teamnumber \par}
+        {\huge \@teamnumber \par}
         \vspace{2cm}
         {\Large \textbf{Engineering Notebook} \par}
         \vspace{0.5cm}
@@ -196,13 +199,12 @@
         }{#1}%
     }
     \section*{#1}
-    \vspace{-0.5cm}
+    \vspace{-0.2cm}
 
-    \begin{tcolorbox}[colback=\@entryphasecolor, colframe=black, boxrule=1pt, arc=0pt]
-        \textbf{Project Title:} \@entrytitle \hfill \textbf{Date:} \@entrydate \\
-        \textbf{Author:} \@entryauthor \hfill \textbf{Phase:} \@entryphase
-    \end{tcolorbox}
-    \vspace{0.5cm}
+    {\color{\@entryphasecolor}\hrule height 6pt}\smallskip
+    {\noindent \small \textbf{Project:} \@entrytitle \hfill \textbf{Date:} \@entrydate \\
+        \textbf{Author:} \@entryauthor \hfill \textbf{Phase:} \@entryphase}\par
+    \medskip
 }
 
 % Legend Page
@@ -214,25 +216,25 @@
 
     \vspace{1cm}
 
-    \begin{tcolorbox}[colback=PhaseDefine, colframe=black, boxrule=1pt, arc=0pt]
-        \textbf{Define Problem:} Identifying the core issue, setting SMART goals, outlining constraints and deliverables.
-    \end{tcolorbox}
+    \vspace{0.5cm}
+    {\color{PhaseDefine}\hrule height 6pt}\smallskip
+    \textbf{Define Problem:} Identifying the core issue, setting SMART goals, outlining constraints and deliverables.
+    \vspace{0.5cm}
 
-    \begin{tcolorbox}[colback=PhaseGenerate, colframe=black, boxrule=1pt, arc=0pt]
-        \textbf{Generate Concepts:} Brainstorming, research, prototyping, and decision matrices to evaluate potential solutions.
-    \end{tcolorbox}
+    {\color{PhaseGenerate}\hrule height 6pt}\smallskip
+    \textbf{Generate Concepts:} Brainstorming, research, prototyping, and decision matrices to evaluate potential solutions.
+    \vspace{0.5cm}
 
-    \begin{tcolorbox}[colback=PhaseDevelop, colframe=black, boxrule=1pt, arc=0pt]
-        \textbf{Develop Solution:} Creating CAD, detailed sketches, math calculations, graphical models, and pseudocode.
-    \end{tcolorbox}
+    {\color{PhaseDevelop}\hrule height 6pt}\smallskip
+    \textbf{Develop Solution:} Creating CAD, detailed sketches, math calculations, graphical models, and pseudocode.
+    \vspace{0.5cm}
 
-    \begin{tcolorbox}[colback=PhaseConstruct, colframe=black, boxrule=1pt, arc=0pt]
-        \textbf{Construct and Test:} Building the robot, writing the code, executing test plans, and gathering qualitative/quantitative data.
-    \end{tcolorbox}
+    {\color{PhaseConstruct}\hrule height 6pt}\smallskip
+    \textbf{Construct and Test:} Building the robot, writing the code, executing test plans, and gathering qualitative/quantitative data.
+    \vspace{0.5cm}
 
-    \begin{tcolorbox}[colback=PhaseEvaluate, colframe=black, boxrule=1pt, arc=0pt]
-        \textbf{Evaluate Solution:} Reflecting on constraints, event outcomes, and planning future improvements.
-    \end{tcolorbox}
+    {\color{PhaseEvaluate}\hrule height 6pt}\smallskip
+    \textbf{Evaluate Solution:} Reflecting on constraints, event outcomes, and planning future improvements.
 
     \vspace{1cm}
     \subsection*{General Formatting}

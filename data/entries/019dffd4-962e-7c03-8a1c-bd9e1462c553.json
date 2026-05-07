@@ -338,7 +338,7 @@
         "content": [
           {
             "type": "text",
-            "text": "int main(){\n\n\n\n\n\n\n\n\n\n    return 0;\n}"
+            "text": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Car {\n  public:\n    string brand;\n    int year;\n\n    // A method (function inside a class)\n    void displayInfo() {\n        cout << brand << \" (\" << year << \")\" << endl;\n    }\n};\n\nint main() {\n    Car myCar; // Create an object of Car\n    myCar.brand = \"Toyota\";\n    myCar.year = 2024;\n    \n    myCar.displayInfo(); // Call the method\n    return 0;\n}"
           }
         ]
       },
