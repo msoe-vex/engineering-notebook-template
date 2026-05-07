@@ -7,6 +7,7 @@
 \RequirePackage{xcolor}
 \RequirePackage{tcolorbox}
 \RequirePackage{hyperref}
+\RequirePackage{bookmark}
 \RequirePackage{booktabs}
 \RequirePackage{tabularx}
 \RequirePackage{titlesec}
@@ -41,7 +42,7 @@
 \Crefname{listing}{Code}{Codes}
 
 % Custom Block Header Command
-\newcommand{\blockheader}[2]{{\noindent\textbf{#1\if\relax\detokenize{#2}\relax\else: #2\fi}\par\nopagebreak\smallskip}}
+\newcommand{\blockheader}[2]{{\noindent\textbf{#1\if\relax\detokenize{#2}\relax\else: #2\fi}\par\nopagebreak\medskip}}
 
 % Code Highlighting Setup
 \lstset{
@@ -81,8 +82,16 @@
 \definecolor{PhaseGenerate}{HTML}{FFD9B3} % Light Orange
 \definecolor{PhaseDevelop}{HTML}{FFFFB3} % Light Yellow
 \definecolor{PhaseConstruct}{HTML}{B3FFB3} % Light Green
-\definecolor{PhaseEvaluate}{HTML}{B3D9FF} % Light Blue
-\definecolor{PhaseDefault}{HTML}{E0E0E0} % Gray
+\definecolor{PhaseEvaluate}{HTML}{FFEBEE}
+\definecolor{PhaseDefault}{HTML}{FFFFFF}
+
+% Code Highlighting Colors (GitHub Style)
+\definecolor{codekeyword}{RGB}{0, 92, 197}
+\definecolor{codecomment}{RGB}{106, 115, 125}
+\definecolor{codestring}{RGB}{3, 47, 98}
+\definecolor{codegray}{RGB}{246, 248, 250}
+\definecolor{codedirective}{RGB}{215, 58, 73}
+\definecolor{codetype}{RGB}{111, 66, 193}
 
 % Graphic path setup: Images can be placed in ./data/assets/
 \graphicspath{{./data/assets/}}
@@ -190,6 +199,9 @@
     \stepcounter{tocentrycount}
     \edef\tempcolor{\getphasecolor{#4}}
     \addtocontents{toc}{\protect\colorlet{toccolor-\thetocentrycount}{\tempcolor}}
+    \refstepcounter{section}
+    \section*{#1}
+    \leavevmode\par\vspace{-\baselineskip}
     \phantomsection
     \addcontentsline{toc}{section}{%
         \texorpdfstring{%
@@ -198,7 +210,6 @@
             \protect\parbox[t]{0.82\linewidth}{\textbf{#1}\newline\footnotesize \textcolor{gray}{#4 --- #3 (#2)}}%
         }{#1}%
     }
-    \section*{#1}
     \vspace{-0.2cm}
 
     {\color{\@entryphasecolor}\hrule height 6pt}\smallskip
@@ -275,7 +286,37 @@
     \refstepcounter{lstlisting}%
     \blockheader{Code \thelstlisting}{#2}%
     \label{#4}%
-    \lstset{language=#1, basicstyle=\small\ttfamily, breaklines=true, belowskip=0pt}%
+    \lstset{
+        language=#1,
+        basicstyle=\small\ttfamily,
+        breaklines=true,
+        belowskip=0pt,
+        keywordstyle=\color{codekeyword}\bfseries,
+        commentstyle=\color{codecomment},
+        stringstyle=\color{codestring},
+        showstringspaces=false,
+        tabsize=2,
+        keywords=[1]{%
+            alignas, alignof, and, and_eq, asm, atomic_cancel, atomic_commit, atomic_noexcept, auto,
+            bitand, bitor, bool, break, case, catch, char, char16_t, char32_t, class, compl, concept,
+            const, constexpr, const_cast, continue, co_await, co_return, co_yield, decltype, default,
+            delete, do, double, dynamic_cast, else, enum, explicit, export, extern, false, float,
+            for, friend, goto, if, import, inline, int, long, module, mutable, namespace, new,
+            noexcept, not, not_eq, nullptr, operator, or, or_eq, private, protected, public,
+            reflexpr, register, reinterpret_cast, requires, return, short, signed, sizeof,
+            static, static_assert, static_cast, struct, switch, synchronized, template, this,
+            thread_local, throw, true, try, typedef, typeid, typename, union, unsigned, using,
+            virtual, void, volatile, wchar_t, while, xor, xor_eq
+        },
+        keywordstyle=[1]\color{codekeyword}\bfseries,
+        keywords=[2]{%
+            string, vector, map, set, pair, tuple, unique_ptr, shared_ptr, weak_ptr,
+            make_unique, make_shared, cout, cin, endl, cerr, clog, size_t,
+            uint8_t, uint16_t, uint32_t, uint64_t, int8_t, int16_t, int32_t, int64_t
+        },
+        keywordstyle=[2]\color{codetype},
+        moredelim=[l][\color{codedirective}]{\#},
+    }%
 }%
 {%
     \nopagebreak
