@@ -136,6 +136,7 @@
 \renewcommand{\headrulewidth}{0.4pt}
 
 % TOC and Section Styling
+\newcounter{tocentrycount}
 \setcounter{secnumdepth}{0} % Disable section numbering
 \setcounter{tocdepth}{3}    % Include subsections in TOC
 \renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
@@ -145,14 +146,16 @@
 \renewcommand{\cftsecfont}{\bfseries}
 \renewcommand{\cftsecpagefont}{\bfseries}
 
-% Helper to get phase color
-\DeclareRobustCommand{\getphasecolor}[1]{%
-    \ifstrequal{#1}{Define Problem}{PhaseDefine}{%
-    \ifstrequal{#1}{Generate Concepts}{PhaseGenerate}{%
-    \ifstrequal{#1}{Develop Solution}{PhaseDevelop}{%
-    \ifstrequal{#1}{Construct and Test}{PhaseConstruct}{%
-    \ifstrequal{#1}{Evaluate Solution}{PhaseEvaluate}{%
-    PhaseDefault}}}}}%
+% Phase color mapping
+\csdef{phasecolor@Define Problem}{PhaseDefine}
+\csdef{phasecolor@Generate Concepts}{PhaseGenerate}
+\csdef{phasecolor@Develop Solution}{PhaseDevelop}
+\csdef{phasecolor@Construct and Test}{PhaseConstruct}
+\csdef{phasecolor@Evaluate Solution}{PhaseEvaluate}
+
+% Helper to get phase color (expandable)
+\newcommand{\getphasecolor}[1]{%
+    \ifcsdef{phasecolor@#1}{\csuse{phasecolor@#1}}{PhaseDefault}%
 }
 
 % Commands to set current entry info
@@ -181,10 +184,13 @@
                         \renewcommand{\@entryphasecolor}{PhaseDefault}
                     }}}}}
 
+    \stepcounter{tocentrycount}
+    \edef\tempcolor{\getphasecolor{#4}}
+    \addtocontents{toc}{\protect\colorlet{toccolor-\thetocentrycount}{\tempcolor}}
     \phantomsection
     \addcontentsline{toc}{section}{%
         \texorpdfstring{%
-            \protect\colorbox{\getphasecolor{#4}}{\makebox[0pt][l]{\hspace{-3pt}\rule[-6pt]{0pt}{18pt}}}%
+            \protect\colorbox{toccolor-\thetocentrycount}{\makebox[0pt][l]{\hspace{-3pt}\rule[-6pt]{0pt}{18pt}}}%
             \hspace{6pt}%
             \protect\parbox[t]{0.82\linewidth}{\textbf{#1}\newline\footnotesize \textcolor{gray}{#4 --- #3 (#2)}}%
         }{#1}%
