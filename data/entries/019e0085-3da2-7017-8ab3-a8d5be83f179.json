@@ -1,0 +1,24 @@
+{
+  "version": 3,
+  "content": {
+    "type": "doc",
+    "content": [
+      {
+        "type": "image",
+        "attrs": {
+          "src": "data/assets/2ddf277ef44e6b54a396054233d29a050962b6d9c2fd5e84e178862a53e39091.png",
+          "alt": "",
+          "title": "VEX CAD",
+          "width": "100%",
+          "height": null,
+          "id": "019e0085-5346-76d6-b2e4-20b4f4c9d0e5",
+          "filePath": "data/assets/2ddf277ef44e6b54a396054233d29a050962b6d9c2fd5e84e178862a53e39091.png",
+          "caption": "cad"
+        }
+      },
+      {
+        "type": "paragraph"
+      }
+    ]
+  }
+}
