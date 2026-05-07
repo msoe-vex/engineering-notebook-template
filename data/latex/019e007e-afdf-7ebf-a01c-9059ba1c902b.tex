@@ -30,7 +30,28 @@ More words
 More words
 
 \begin{notebookcodeblock}{C++}{Main function}{This code runs the main function.}{019e007e-afdf-7347-a6e9-f9853fe7e0e9}
-int main(){
+#include <iostream>
+#include <fstream> // Required for file operations
+#include <string>
+
+int main() {
+    // 1. CREATE and WRITE to a file
+    std::ofstream outFile("example.txt"); 
+    if (outFile.is_open()) {
+        outFile << "This is an example C++ file content.\n";
+        outFile.close(); // Always close files to free memory
+    }
+
+    // 2. READ from the file
+    std::ifstream inFile("example.txt");
+    std::string line;
+    if (inFile.is_open()) {
+        while (std::getline(inFile, line)) { // Read line by line
+            std::cout << line << std::endl;
+        }
+        inFile.close();
+    }
+
     return 0;
 }
 \end{notebookcodeblock}
