@@ -331,6 +331,21 @@
         ]
       },
       {
+        "type": "heading",
+        "attrs": {
+          "level": 2
+        },
+        "content": [
+          {
+            "type": "text",
+            "text": "Header 3"
+          }
+        ]
+      },
+      {
+        "type": "paragraph"
+      },
+      {
         "type": "bulletList",
         "content": [
           {

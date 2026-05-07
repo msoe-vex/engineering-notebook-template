@@ -5,16 +5,17 @@
       "id": "019e007e-afdf-725a-96ab-cffb68579dd2",
       "title": "Project 2",
       "author": "Andrew Needham",
-      "phase": "Define Problem",
+      "phase": "Generate Concepts",
       "createdAt": "2026-05-06T23:28:50.234Z",
-      "updatedAt": "2026-05-07T03:32:43.103Z",
+      "updatedAt": "2026-05-07T04:53:29.693Z",
       "filename": "data/entries/019e007e-afdf-725a-96ab-cffb68579dd2.json",
       "resources": {},
       "isValid": true,
       "validationErrors": [],
       "references": [
         "019e007e-afdf-7a5c-bcb9-8ec04bbc5227"
-      ]
+      ],
+      "assets": []
     },
     "019e007e-afdf-7ebf-a01c-9059ba1c902b": {
       "id": "019e007e-afdf-7ebf-a01c-9059ba1c902b",
@@ -22,7 +23,7 @@
       "author": "Andrew Needham",
       "phase": "Define Problem",
       "createdAt": "2026-05-06T23:20:55.031Z",
-      "updatedAt": "2026-05-07T04:16:28.170Z",
+      "updatedAt": "2026-05-07T04:58:21.336Z",
       "filename": "data/entries/019e007e-afdf-7ebf-a01c-9059ba1c902b.json",
       "resources": {
         "019e007e-afdf-7347-a6e9-f9853fe7e0e9": {

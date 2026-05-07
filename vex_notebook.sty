@@ -178,14 +178,37 @@
 
 % TOC and Section Styling
 \newcounter{tocentrycount}
+\colorlet{toccolor-0}{PhaseDefault}
 \setcounter{secnumdepth}{0} % Disable section numbering
 \setcounter{tocdepth}{3}    % Include subsections in TOC
-\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
-\renewcommand{\cftsubsecleader}{\cftdotfill{\cftdotsep}}
-\renewcommand{\cftsubsubsecleader}{\cftdotfill{\cftdotsep}}
-\setlength{\cftbeforesecskip}{1.2em}
-\renewcommand{\cftsecfont}{\bfseries}
-\renewcommand{\cftsecpagefont}{\bfseries}
+\renewcommand{\cftsecleader}{\cftdotfill{1}}
+\renewcommand{\cftsubsecleader}{\cftdotfill{1}}
+\renewcommand{\cftsubsubsecleader}{\cftdotfill{1}}
+\setlength{\cftbeforesecskip}{0.5em}
+\setlength{\cftbeforesubsecskip}{0.1em}
+\renewcommand{\cftsecfont}{\protect\colorbox{toccolor-\thesection}{\makebox[0pt][l]{\hspace{-3pt}\rule[-4pt]{0pt}{14pt}}}\hspace{6pt}\small\bfseries}
+\renewcommand{\cftsecpagefont}{\small}
+\renewcommand{\cftsubsecfont}{\protect\colorbox{toccolor-\thesection}{\makebox[0pt][l]{\hspace{-3pt}\rule[-3pt]{0pt}{12pt}}}\hspace{6pt}\small\bfseries}
+\renewcommand{\cftsubsecpagefont}{\small}
+
+\renewcommand{\cftsubsubsecfont}{\protect\colorbox{toccolor-\thesection}{\makebox[0pt][l]{\hspace{-3pt}\rule[-3pt]{0pt}{12pt}}}\hspace{6pt}\small\bfseries}
+\renewcommand{\cftsubsubsecpagefont}{\small}
+
+\cftsetpnumwidth{2.5em}
+\cftsetrmarg{3.5em}
+
+% Section Header Styling with Phase Colors
+\titleformat{\subsection}[display]
+  {\normalfont\large\bfseries}
+  {\color{\@entryphasecolor}\rule{\linewidth}{3pt}}
+  {-1.5ex}
+  {}
+
+\titleformat{\subsubsection}[display]
+  {\normalfont\normalsize\bfseries}
+  {\color{\@entryphasecolor}\rule{\linewidth}{1.5pt}}
+  {-1.5ex}
+  {}
 
 % Phase color mapping
 \csdef{phasecolor@Define Problem}{PhaseDefine}
@@ -227,23 +250,22 @@
 
     \stepcounter{tocentrycount}
     \edef\tempcolor{\getphasecolor{#4}}
-    \addtocontents{toc}{\protect\colorlet{toccolor-\thetocentrycount}{\tempcolor}}
     \refstepcounter{section}
-    \section*{#1}
-    \leavevmode\par\vspace{-\baselineskip}
+    \addtocontents{toc}{\protect\colorlet{toccolor-\thesection}{\tempcolor}}
     \phantomsection
+    \section*{#1 \hfill \normalfont\small #2}
+    \leavevmode\par\vspace{-\baselineskip}
     \addcontentsline{toc}{section}{%
         \texorpdfstring{%
-            \protect\colorbox{toccolor-\thetocentrycount}{\makebox[0pt][l]{\hspace{-3pt}\rule[-6pt]{0pt}{18pt}}}%
+            \protect\colorbox{toccolor-\thesection}{\makebox[0pt][l]{\hspace{-3pt}\rule[-4pt]{0pt}{14pt}}}%
             \hspace{6pt}%
-            \protect\parbox[t]{0.82\linewidth}{\textbf{#1}\newline\footnotesize \textcolor{gray}{#4 --- #3 (#2)}}%
+            \textbf{#1} \protect\textcolor{gray}{(#2)}%
         }{#1}%
     }
     \vspace{-0.2cm}
 
     {\color{\@entryphasecolor}\hrule height 6pt}\smallskip
-    {\noindent \small \textbf{Project:} \@entrytitle \hfill \textbf{Date:} \@entrydate \\
-        \textbf{Author:} \@entryauthor \hfill \textbf{Phase:} \@entryphase}\par
+    {\noindent \small \textbf{Author:} \@entryauthor \hfill \textbf{Phase:} \@entryphase}\par
     \medskip
 }
 
@@ -378,7 +400,7 @@
         \if\relax\detokenize{#1}\relax
             \oldhyperref{#2}%
         \else
-            \oldhyperref[#1]{#2} (\cref{#1})%
+            \oldhyperref[#1]{#2 (\cref*{#1})}%
         \fi
     }
 }
