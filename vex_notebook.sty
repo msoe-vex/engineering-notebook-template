@@ -1,5 +1,8 @@
 \ProvidesPackage{vex_notebook}[2024/01/01 VEX Engineering Notebook Template]
 
+% Ensure hyperref uses colored link text even if other packages load it early
+\PassOptionsToPackage{colorlinks=true}{hyperref}
+
 \RequirePackage[utf8]{inputenc}
 \RequirePackage{geometry}
 \RequirePackage{fancyhdr}
@@ -17,6 +20,7 @@
 \RequirePackage{listings}
 \RequirePackage{caption}
 \RequirePackage{cleveref}
+\RequirePackage{xstring}
 \RequirePackage{letltxmacro}
 \RequirePackage{etoolbox}
 \RequirePackage[scaled]{inter}
@@ -391,12 +395,47 @@
 
 % Redefine \hyperref to include automatic reference markers
 \AtBeginDocument{
-    \LetLtxMacro{\oldhyperref}{\hyperref}
-    \DeclareRobustCommand{\hyperref}[2][]{%
-        \if\relax\detokenize{#1}\relax
-            \oldhyperref{#2}%
+    % Light blue links
+    \definecolor{linkblue}{HTML}{1E90FF}
+    \hypersetup{linkcolor=linkblue, urlcolor=linkblue, citecolor=linkblue}
+}
+
+% Helper command for formatted links
+% Usage: \notebooklink{text}{type}{uuid/url}
+% Supported types: entry, header, image, table, codeBlock, url
+\newcommand{\notebooklink}[3]{%
+    \ifthenelse{\equal{#2}{url}}{%
+        \href{#3}{#1}%
+    }{%
+        \ifcsname r@#3\endcsname
+            \ifthenelse{\equal{#2}{entry}}{%
+                \hyperref[#3]{#1 (\nameref{#3}\ p.\,\pageref{#3})}%
+            }{%
+                \ifthenelse{\equal{#2}{header}}{%
+                    \hyperref[#3]{#1 (\nameref{#3}\ p.\,\pageref{#3})}%
+                }{%
+                    \hyperref[#3]{#1 (\cref{#3})}%
+                }%
+            }%
         \else
-            \oldhyperref[#1]{#2 (\cref*{#1})}%
+            \hyperref[#3]{#1}%
         \fi
-    }
+    }%
+}
+
+% Backward-compatible wrappers for older generated LaTeX files
+\newcommand{\resourcelink}[2][]{\notebooklink{#2}{resource}{#1}}
+\newcommand{\entrylink}[2][]{\notebooklink{#2}{entry}{#1}}
+\newcommand{\headerlink}[2][]{\notebooklink{#2}{header}{#1}}
+
+% Command to output a header with UUID label
+% Usage: \notebookheader{text}{level}{uuid}
+% level: 1 = subsection, 2 = subsubsection, etc.
+\newcommand{\notebookheader}[3]{%
+    \ifnum#2=1
+        \subsection{#1}%
+    \else
+        \subsubsection{#1}%
+    \fi
+    \label{#3}%
 }

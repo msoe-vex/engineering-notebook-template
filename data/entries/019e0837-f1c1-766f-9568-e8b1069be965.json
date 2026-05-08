@@ -6,7 +6,8 @@
       {
         "type": "heading",
         "attrs": {
-          "level": 1
+          "level": 1,
+          "id": "019e08bf-f6de-7ce9-a1ee-26cf7273c03f"
         },
         "content": [
           {
@@ -81,6 +82,92 @@
               }
             ],
             "text": "Project 1"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "Link to header "
+          },
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "link",
+                "attrs": {
+                  "href": "#019e08bf-cc78-7a0b-8da9-a09a729179f2",
+                  "target": "_blank",
+                  "rel": "noopener noreferrer nofollow",
+                  "class": "text-nb-primary hover:underline hover:decoration-nb-primary transition-all cursor-text",
+                  "title": null,
+                  "resourceId": "019e08bf-cc78-7a0b-8da9-a09a729179f2",
+                  "entryId": "019e0837-f1c1-7ccd-9149-b01d5d83b57c"
+                }
+              },
+              {
+                "type": "underline"
+              }
+            ],
+            "text": "here"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "Link to "
+          },
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "link",
+                "attrs": {
+                  "href": "#019e0837-f1c1-766f-9568-e8b1069be965",
+                  "target": "_blank",
+                  "rel": "noopener noreferrer nofollow",
+                  "class": "text-nb-primary hover:underline hover:decoration-nb-primary transition-all cursor-text",
+                  "title": null,
+                  "resourceId": "019e0837-f1c1-766f-9568-e8b1069be965",
+                  "entryId": "019e0837-f1c1-766f-9568-e8b1069be965"
+                }
+              },
+              {
+                "type": "underline"
+              }
+            ],
+            "text": "this entry"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "link",
+                "attrs": {
+                  "href": "#019e0837-f1c1-74e2-b8e7-69298a4a8afb",
+                  "target": "_blank",
+                  "rel": "noopener noreferrer nofollow",
+                  "class": "text-nb-primary hover:underline hover:decoration-nb-primary transition-all cursor-text",
+                  "title": null,
+                  "resourceId": "019e0837-f1c1-74e2-b8e7-69298a4a8afb",
+                  "entryId": "019e0837-f1c1-7ccd-9149-b01d5d83b57c"
+                }
+              },
+              {
+                "type": "underline"
+              }
+            ],
+            "text": "image"
           }
         ]
       }

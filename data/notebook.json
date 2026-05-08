@@ -7,14 +7,22 @@
       "author": "Andrew Needham",
       "phase": 2,
       "createdAt": "2026-05-06T23:28:50.234Z",
-      "updatedAt": "2026-05-08T15:54:06.882Z",
+      "updatedAt": "2026-05-08T18:25:48.452Z",
       "filename": "data/entries/019e0837-f1c1-766f-9568-e8b1069be965.json",
-      "resources": {},
+      "resources": {
+        "019e08bf-f6de-7ce9-a1ee-26cf7273c03f": {
+          "type": "header",
+          "title": "Header 1",
+          "caption": ""
+        }
+      },
       "isValid": true,
       "validationErrors": [],
       "references": [
         "019e0837-f1c1-74e2-b8e7-69298a4a8afb",
-        "019e0837-f1c1-7ccd-9149-b01d5d83b57c"
+        "019e0837-f1c1-7ccd-9149-b01d5d83b57c",
+        "019e08bf-cc78-7a0b-8da9-a09a729179f2",
+        "019e0837-f1c1-766f-9568-e8b1069be965"
       ],
       "assets": []
     },
@@ -24,13 +32,28 @@
       "author": "Andrew Needham",
       "phase": 1,
       "createdAt": "2026-05-06T23:20:55.031Z",
-      "updatedAt": "2026-05-08T03:57:18.463Z",
+      "updatedAt": "2026-05-08T18:25:10.737Z",
       "filename": "data/entries/019e0837-f1c1-7ccd-9149-b01d5d83b57c.json",
       "resources": {
+        "019e08bf-924a-7fde-883b-19a9f06ffa6c": {
+          "type": "header",
+          "title": "Header 1",
+          "caption": ""
+        },
+        "019e08bf-9f65-78f6-9ad7-4d039f09dbc8": {
+          "type": "header",
+          "title": "Header 2",
+          "caption": ""
+        },
         "019e0837-f1c1-7775-9916-1cc82e57a4cf": {
           "type": "codeBlock",
           "title": "Main function",
           "caption": "This code runs the main function."
+        },
+        "019e08bf-b58a-7bc0-8c62-fe14e5c7af85": {
+          "type": "header",
+          "title": "Header 3",
+          "caption": ""
         },
         "019e0837-f1c1-7236-b45a-32e29d6d74c6": {
           "type": "table",
@@ -42,10 +65,25 @@
           "title": "RR",
           "caption": "RR"
         },
+        "019e08bf-c313-7239-a2a3-4a3f95e24ceb": {
+          "type": "header",
+          "title": "Header 3",
+          "caption": ""
+        },
+        "019e08bf-cc78-7a0b-8da9-a09a729179f2": {
+          "type": "header",
+          "title": "Header 4",
+          "caption": ""
+        },
         "019e0837-f1c1-7557-98c9-abe407af4acc": {
           "type": "codeBlock",
           "title": "Main function",
           "caption": "This code runs the main function."
+        },
+        "019e08bf-df86-7411-bd92-a800322be8b5": {
+          "type": "header",
+          "title": "Header 3",
+          "caption": ""
         },
         "019e0837-f1c1-7a12-b887-00e057ab8cc6": {
           "type": "table",

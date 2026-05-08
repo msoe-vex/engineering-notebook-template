@@ -6,7 +6,8 @@
       {
         "type": "heading",
         "attrs": {
-          "level": 1
+          "level": 1,
+          "id": "019e08bf-924a-7fde-883b-19a9f06ffa6c"
         },
         "content": [
           {
@@ -53,7 +54,8 @@
       {
         "type": "heading",
         "attrs": {
-          "level": 2
+          "level": 2,
+          "id": "019e08bf-9f65-78f6-9ad7-4d039f09dbc8"
         },
         "content": [
           {
@@ -359,7 +361,8 @@
       {
         "type": "heading",
         "attrs": {
-          "level": 2
+          "level": 2,
+          "id": "019e08bf-b58a-7bc0-8c62-fe14e5c7af85"
         },
         "content": [
           {
@@ -650,12 +653,13 @@
       {
         "type": "heading",
         "attrs": {
-          "level": 1
+          "level": 1,
+          "id": "019e08bf-c313-7239-a2a3-4a3f95e24ceb"
         },
         "content": [
           {
             "type": "text",
-            "text": "Header 1"
+            "text": "Header 3"
           }
         ]
       },
@@ -697,12 +701,13 @@
       {
         "type": "heading",
         "attrs": {
-          "level": 2
+          "level": 2,
+          "id": "019e08bf-cc78-7a0b-8da9-a09a729179f2"
         },
         "content": [
           {
             "type": "text",
-            "text": "Header 2"
+            "text": "Header 4"
           }
         ]
       },
@@ -1003,7 +1008,8 @@
       {
         "type": "heading",
         "attrs": {
-          "level": 2
+          "level": 2,
+          "id": "019e08bf-df86-7411-bd92-a800322be8b5"
         },
         "content": [
           {
