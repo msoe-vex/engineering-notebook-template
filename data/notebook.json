@@ -23,29 +23,48 @@
       "author": "Andrew Needham",
       "phase": 1,
       "createdAt": "2026-05-06T23:20:55.031Z",
-      "updatedAt": "2026-05-07T14:16:42.381Z",
+      "updatedAt": "2026-05-08T03:57:18.463Z",
       "filename": "data/entries/019e007e-afdf-7ebf-a01c-9059ba1c902b.json",
       "resources": {
         "019e007e-afdf-7347-a6e9-f9853fe7e0e9": {
+          "type": "codeBlock",
           "title": "Main function",
-          "caption": "This code runs the main function.",
-          "type": "codeBlock"
+          "caption": "This code runs the main function."
         },
         "019e0099-326d-78ac-a969-4419b66919f6": {
+          "type": "table",
           "title": "Results table",
-          "caption": "This table shows results",
-          "type": "table"
+          "caption": "This table shows results"
         },
         "019e007e-afdf-7a5c-bcb9-8ec04bbc5227": {
+          "type": "image",
           "title": "RR",
-          "caption": "RR",
-          "type": "image"
+          "caption": "RR"
+        },
+        "019e05b2-c123-783b-beef-2a45091a14eb": {
+          "type": "codeBlock",
+          "title": "Main function",
+          "caption": "This code runs the main function."
+        },
+        "019e05b2-c123-72a6-a0c3-24aac44fd7da": {
+          "type": "table",
+          "title": "Results table",
+          "caption": "This table shows results"
+        },
+        "019e05b2-c123-754a-9fe0-9b123f16ca77": {
+          "type": "image",
+          "title": "RR",
+          "caption": "RR"
         }
       },
       "isValid": true,
       "validationErrors": [],
-      "references": [],
+      "references": [
+        "019e007e-afdf-7a5c-bcb9-8ec04bbc5227",
+        "019e05b2-c123-754a-9fe0-9b123f16ca77"
+      ],
       "assets": [
+        "data/assets/65be25f1837b9047da393c5d7a56bb9b721b63a3e21f83239cafdeaf3afd4866.png",
         "data/assets/65be25f1837b9047da393c5d7a56bb9b721b63a3e21f83239cafdeaf3afd4866.png"
       ]
     },
@@ -55,13 +74,13 @@
       "author": "Andrew Needham",
       "phase": 3,
       "createdAt": "2026-05-07T03:37:21.568Z",
-      "updatedAt": "2026-05-07T14:16:47.146Z",
+      "updatedAt": "2026-05-08T03:59:45.005Z",
       "filename": "data/entries/019e0082-efa0-780f-9e54-1953d5907a7b.json",
       "resources": {
-        "019e0083-2533-7cb4-9848-208e7bc3b45a": {
-          "title": "VEX CAD",
-          "caption": "cad",
-          "type": "image"
+        "019e05bd-87eb-7c6e-a34c-f9ae47394b91": {
+          "type": "image",
+          "title": "Cad",
+          "caption": "Cad"
         }
       },
       "isValid": true,
@@ -77,17 +96,39 @@
       "author": "Andrew Needham",
       "phase": 4,
       "createdAt": "2026-05-07T03:39:52.609Z",
-      "updatedAt": "2026-05-07T14:16:49.333Z",
+      "updatedAt": "2026-05-08T03:59:42.285Z",
       "filename": "data/entries/019e0085-3da2-7017-8ab3-a8d5be83f179.json",
       "resources": {
-        "019e0085-5346-76d6-b2e4-20b4f4c9d0e5": {
-          "title": "VEX CAD",
-          "caption": "cad",
-          "type": "image"
+        "019e05bd-906f-7e4d-a1c0-9ee74521516e": {
+          "type": "image",
+          "title": "Cad",
+          "caption": "Cad"
         }
       },
       "isValid": true,
       "validationErrors": [],
+      "references": [],
+      "assets": [
+        "data/assets/2ddf277ef44e6b54a396054233d29a050962b6d9c2fd5e84e178862a53e39091.png"
+      ]
+    },
+    "019e05bc-5d3b-750e-b084-0dfd58d608ce": {
+      "id": "019e05bc-5d3b-750e-b084-0dfd58d608ce",
+      "title": "Project 5",
+      "author": "Andrew Needham",
+      "phase": 5,
+      "createdAt": "2026-05-08T03:58:11.259Z",
+      "updatedAt": "2026-05-08T03:59:39.470Z",
+      "filename": "data/entries/019e05bc-5d3b-750e-b084-0dfd58d608ce.json",
+      "isValid": true,
+      "validationErrors": [],
+      "resources": {
+        "019e05bd-969d-70cc-9681-decc2cfdb10e": {
+          "type": "image",
+          "title": "Cad",
+          "caption": "Cad"
+        }
+      },
       "references": [],
       "assets": [
         "data/assets/2ddf277ef44e6b54a396054233d29a050962b6d9c2fd5e84e178862a53e39091.png"
@@ -119,7 +160,7 @@
       }
     ]
   },
-  "projectId": "21fba045ae83d50e1ddf85e90784d79e",
+  "projectId": "019e054c-1441-7257-b33f-9d03edf6d358",
   "projectName": "notebook",
   "assetRefs": {
     "data/assets/61878c1f0040d1adf131fade8fadab2b8493f1938e446a720ffa59238f924f5e.png": [
@@ -130,7 +171,8 @@
     ],
     "data/assets/2ddf277ef44e6b54a396054233d29a050962b6d9c2fd5e84e178862a53e39091.png": [
       "019e0082-efa0-780f-9e54-1953d5907a7b",
-      "019e0085-3da2-7017-8ab3-a8d5be83f179"
+      "019e0085-3da2-7017-8ab3-a8d5be83f179",
+      "019e05bc-5d3b-750e-b084-0dfd58d608ce"
     ]
   },
   "phases": [
