@@ -4,6 +4,15 @@
     "type": "doc",
     "content": [
       {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "New image"
+          }
+        ]
+      },
+      {
         "type": "image",
         "attrs": {
           "src": "data/assets/2ddf277ef44e6b54a396054233d29a050962b6d9c2fd5e84e178862a53e39091.png",
@@ -11,7 +20,7 @@
           "title": "Cad",
           "width": "100%",
           "height": null,
-          "id": "019e05ce-de7d-7b93-bc5d-f4ca7785610b",
+          "id": "019e0837-f1c1-7f64-ad71-d657b13c6177",
           "filePath": "data/assets/2ddf277ef44e6b54a396054233d29a050962b6d9c2fd5e84e178862a53e39091.png",
           "caption": "Cad"
         }

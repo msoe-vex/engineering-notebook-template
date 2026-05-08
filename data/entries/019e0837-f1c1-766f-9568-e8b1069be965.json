@@ -37,13 +37,13 @@
               {
                 "type": "link",
                 "attrs": {
-                  "href": "#019e05ce-de7d-7909-9444-73a79c8228ce",
+                  "href": "#019e0837-f1c1-74e2-b8e7-69298a4a8afb",
                   "target": "_blank",
                   "rel": "noopener noreferrer nofollow",
                   "class": "text-nb-primary hover:underline hover:decoration-nb-primary transition-all cursor-text",
                   "title": null,
-                  "resourceId": "019e05ce-de7d-7909-9444-73a79c8228ce",
-                  "entryId": "019e05ce-de7d-7c46-9eb4-6817bce838e9"
+                  "resourceId": "019e0837-f1c1-74e2-b8e7-69298a4a8afb",
+                  "entryId": "019e0837-f1c1-7ccd-9149-b01d5d83b57c"
                 }
               },
               {
@@ -55,6 +55,32 @@
           {
             "type": "text",
             "text": " to the Raider Robotics logo."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "link",
+                "attrs": {
+                  "href": "#019e0837-f1c1-7ccd-9149-b01d5d83b57c",
+                  "target": "_blank",
+                  "rel": "noopener noreferrer nofollow",
+                  "class": "text-nb-primary hover:underline hover:decoration-nb-primary transition-all cursor-text",
+                  "title": null,
+                  "resourceId": "019e0837-f1c1-7ccd-9149-b01d5d83b57c",
+                  "entryId": "019e0837-f1c1-7ccd-9149-b01d5d83b57c"
+                }
+              },
+              {
+                "type": "underline"
+              }
+            ],
+            "text": "Project 1"
           }
         ]
       }
