@@ -133,20 +133,6 @@
       "assets": [
         "data/assets/2ddf277ef44e6b54a396054233d29a050962b6d9c2fd5e84e178862a53e39091.png"
       ]
-    },
-    "019e0638-15e5-7cdb-bf39-bc735916eb5c": {
-      "id": "019e0638-15e5-7cdb-bf39-bc735916eb5c",
-      "title": "",
-      "author": "Andrew Needham",
-      "phase": null,
-      "createdAt": "2026-05-08T06:13:19.461Z",
-      "updatedAt": "2026-05-08T06:13:19.461Z",
-      "filename": "data/entries/019e0638-15e5-7cdb-bf39-bc735916eb5c.json",
-      "isValid": false,
-      "validationErrors": [
-        "Missing title",
-        "Missing or invalid phase"
-      ]
     }
   },
   "team": {
