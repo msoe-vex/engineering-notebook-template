@@ -257,8 +257,8 @@
 }
 
 % Command to start a new entry
-% Usage: \newentry{Title}{Date}{Author}{PhaseID}
-\newcommand{\notebookentry}[4]{%
+% Usage: \newentry{Title}{Date}{Author}{PhaseID}{uuid}
+\newcommand{\notebookentry}[5]{%
     \clearpage
     \gdef\@entrytitle{#1}%
     \renewcommand{\@entrydate}{#2}
@@ -271,6 +271,8 @@
     \refstepcounter{section}
     \addtocontents{toc}{\protect\colorlet{toccolor-\thesection}{\tempcolor}}
     \phantomsection
+    \protected@edef\@currentlabelname{#1}%
+    \label{#5}%
     \section*{#1 \hfill \normalfont\small #2}
     \leavevmode\par\vspace{-\baselineskip}
     \addcontentsline{toc}{section}{%
@@ -409,12 +411,12 @@
     }{%
         \ifcsname r@#3\endcsname
             \ifthenelse{\equal{#2}{entry}}{%
-                \hyperref[#3]{#1 (\nameref{#3}\ p.\,\pageref{#3})}%
+                \hyperref[#3]{#1 (\nameref*{#3}\ p.\,\pageref*{#3})}%
             }{%
                 \ifthenelse{\equal{#2}{header}}{%
-                    \hyperref[#3]{#1 (\nameref{#3}\ p.\,\pageref{#3})}%
+                    \hyperref[#3]{#1 (\nameref*{#3}\ p.\,\pageref*{#3})}%
                 }{%
-                    \hyperref[#3]{#1 (\cref{#3})}%
+                    \hyperref[#3]{#1 (\cref*{#3})}%
                 }%
             }%
         \else
