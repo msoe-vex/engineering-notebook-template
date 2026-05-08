@@ -1,33 +1,36 @@
 # VEX Engineering Notebook
 
-This repository contains the LaTeX source and web CMS for compiling our VEX Robotics engineering notebook.
+This folder contains the LaTeX source for the notebook PDF and the generated preview artifacts used by the web editor.
 
-## Setup Instructions (Local Compilation)
+## Prerequisites
 
-Install the following in order. These are necessary to run the automated build script (`latexmk`) and generate the HTML preview (`latexml`).
+Install these tools before running the notebook build scripts:
 
-1. **[MiKTeX](https://miktex.org/download):** The core LaTeX distribution.
-2. **[Strawberry Perl](https://strawberryperl.com/):** Required to run the build automation.
-3. **[LaTeXML](https://dlmf.nist.gov/LaTeXML/):** Required to generate the static HTML preview for the web app.
-    - Run this command in the terminal to install LaTeXML via CPAN:
+1. **[MiKTeX](https://miktex.org/download)** - the LaTeX distribution used to compile the PDF
+2. **[Strawberry Perl](https://strawberryperl.com/)** - required by the build automation on Windows.
+3. **[LaTeXML](https://dlmf.nist.gov/LaTeXML/):** used to generate the final rendered PDF.
+4. **[LaTeX Workshop](https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop)** - optional VS Code extension if you want editor-side PDF builds.
 
-    ```shell
-    cpan LaTeXML
-    ```
+Run this command in the terminal to install LaTeXML via CPAN:
 
-4. **[LaTeX Workshop](https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop):** The VS Code extension for LaTeX.
+```shell
+cpan LaTeXML
+```
 
-### Compile PDF
+## Build the Notebook
 
-1. Open `main.tex`.
-2. Click the **"Play" icon** (Build LaTeX project) in the top-right corner of the editor, or use the shortcut `Ctrl+Alt+B`.
-3. Open the compiled PDF (`main.pdf`) in the same directory to view the output.
+The main entry point is `main.tex`.
 
-### Compile Web HTML Preview
+- Build the PDF from VS Code with the LaTeX Workshop play button, or press `Ctrl+Alt+B`.
+- The compiled PDF is written next to the source as `main.pdf`.
 
-Run the provided build scripts in the terminal:
+Use the provided scripts to generate the final rendered PDF:
 
-- **Windows:** `build.bat`
-- **Linux/Mac:** `./build.sh`
+- Windows: `build.bat`
+- Linux/macOS: `./build.sh`
 
-This generates an `index.html` file that the web CMS will read for the "Compiled PDF" preview tab.
+## Notes
+
+- Keep notebook content, generated LaTeX, and preview output in sync when making notebook changes.
+- If build tools are installed after the terminal is already open, restart the terminal or VS Code so the PATH updates are picked up.
+- When updating notebook structure or styles, verify both the PDF and the HTML preview.
