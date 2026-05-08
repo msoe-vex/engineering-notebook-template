@@ -157,6 +157,11 @@
         "name": "Charlie Brown",
         "role": "CAD Designer",
         "image": null
+      },
+      {
+        "name": "Andrew Needham",
+        "role": "Controls Lead",
+        "image": "data/assets/8a1a0571b96e6459f0bedea8160cd9f90c05a0d86c2fa70848ad7ab38cf388e5.jpg"
       }
     ]
   },
@@ -206,6 +211,9 @@
   ],
   "assetRefs": {
     "data/assets/61878c1f0040d1adf131fade8fadab2b8493f1938e446a720ffa59238f924f5e.png": [
+      "team"
+    ],
+    "data/assets/8a1a0571b96e6459f0bedea8160cd9f90c05a0d86c2fa70848ad7ab38cf388e5.jpg": [
       "team"
     ],
     "data/assets/65be25f1837b9047da393c5d7a56bb9b721b63a3e21f83239cafdeaf3afd4866.png": [

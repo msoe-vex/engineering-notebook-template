@@ -112,16 +112,37 @@
 \newcommand{\teamlogo}[1]{\gdef\@teamlogo{#1}}
 
 % Member formatting command
+\newsavebox{\@memberboxA}
+\newsavebox{\@memberboxB}
+\newdimen\@memberclip
+
 \newcommand{\teammember}[3]{%
     \begin{minipage}[t]{0.45\linewidth}
         \centering
         \vspace{0.5cm}
-        \begin{adjustbox}{minipage=[c][6cm][c]{5cm}, clip}
-            \centering
-            \ifx&#3&\else
-                \adjustbox{min size={5cm}{6cm}}{\includegraphics{#3}}
-            \fi
-        \end{adjustbox}\par
+        \ifx&#3&
+        \begin{adjustbox}{minipage=[c][6cm][c]{5cm}, frame}
+            \centering\small No Photo
+        \end{adjustbox}
+        \else
+        % Render at width=5cm, measure resulting height
+        \savebox{\@memberboxA}{\includegraphics[width=5cm]{#3}}%
+        \@memberclip=\ht\@memberboxA
+        \ifdim\@memberclip>6cm
+            % Wide image: scale by width, clip top & bottom symmetrically
+            \advance\@memberclip by -6cm
+            \divide\@memberclip by 2
+            \clipbox{0pt \the\@memberclip{} 0pt \the\@memberclip}{\usebox{\@memberboxA}}%
+        \else
+            % Tall/square image: scale by height, clip left & right symmetrically
+            \savebox{\@memberboxB}{\includegraphics[height=6cm]{#3}}%
+            \@memberclip=\wd\@memberboxB
+            \advance\@memberclip by -5cm
+            \divide\@memberclip by 2
+            \clipbox{\the\@memberclip{} 0pt \the\@memberclip{} 0pt}{\usebox{\@memberboxB}}%
+        \fi
+        \fi
+        \par
         \vspace{0.3cm}
         {\large\textbf{#1}}\par
         {\small\textit{#2}}\par
@@ -195,16 +216,16 @@
 
 % Section Header Styling with Phase Colors
 \titleformat{\subsection}[display]
-  {\normalfont\large\bfseries}
-  {\color{\@entryphasecolor}\rule{\linewidth}{3pt}}
-  {-1.5ex}
-  {}
+{\normalfont\large\bfseries}
+{\color{\@entryphasecolor}\rule{\linewidth}{3pt}}
+{-1.5ex}
+{}
 
 \titleformat{\subsubsection}[display]
-  {\normalfont\normalsize\bfseries}
-  {\color{\@entryphasecolor}\rule{\linewidth}{1.5pt}}
-  {-1.5ex}
-  {}
+{\normalfont\normalsize\bfseries}
+{\color{\@entryphasecolor}\rule{\linewidth}{1.5pt}}
+{-1.5ex}
+{}
 
 
 % Helper to get phase color (expandable)
