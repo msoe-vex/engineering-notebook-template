@@ -3,7 +3,6 @@
 % Ensure hyperref uses colored link text even if other packages load it early
 \PassOptionsToPackage{colorlinks=true}{hyperref}
 
-\RequirePackage[utf8]{inputenc}
 \RequirePackage{geometry}
 \RequirePackage{fancyhdr}
 \RequirePackage{graphicx}
@@ -23,8 +22,27 @@
 \RequirePackage{xstring}
 \RequirePackage{letltxmacro}
 \RequirePackage{etoolbox}
-\RequirePackage[scaled]{inter}
-\RequirePackage{inconsolata}
+
+% XeLaTeX Font Setup
+\RequirePackage{fontspec}
+
+% Load fonts from the /fonts/ path which will be mapped in the WASM engine
+\setmainfont{Inter}[
+    Path = ./fonts/inter/,
+    Extension = .otf,
+    UprightFont = *-Regular,
+    BoldFont = *-Bold,
+    ItalicFont = *-Italic,
+    BoldItalicFont = *-BoldItalic
+]
+
+\setmonofont{Inconsolata}[
+    Path = ./fonts/inconsolata/,
+    Extension = .otf,
+    UprightFont = *-Regular,
+    BoldFont = *-Bold
+]
+
 \renewcommand{\familydefault}{\sfdefault}
 
 % Global Caption Styling

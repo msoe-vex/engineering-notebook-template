@@ -1,5 +1,9 @@
 # data/
 main.pdf
+main.zip
+main.dep
+manifest.json
+manifest_raw.txt
 
 ## Core latex/pdflatex auxiliary files:
 *.aux
