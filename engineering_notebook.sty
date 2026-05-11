@@ -8,10 +8,10 @@
 \RequirePackage{graphicx}
 \RequirePackage{xcolor}
 \RequirePackage{tcolorbox}
+\RequirePackage{amsmath}
+\RequirePackage{amssymb}
 \RequirePackage{hyperref}
-\RequirePackage{bookmark}
 \RequirePackage{booktabs}
-\RequirePackage{tabularx}
 \RequirePackage{titlesec}
 \RequirePackage{tocloft}
 \RequirePackage{ifthen}
@@ -36,6 +36,15 @@
     BoldItalicFont = *-BoldItalic
 ]
 
+\setsansfont{Inter}[
+    Path = ./fonts/inter/,
+    Extension = .otf,
+    UprightFont = *-Regular,
+    BoldFont = *-Bold,
+    ItalicFont = *-Italic,
+    BoldItalicFont = *-BoldItalic
+]
+
 \setmonofont{Inconsolata}[
     Path = ./fonts/inconsolata/,
     Extension = .otf,
@@ -43,7 +52,7 @@
     BoldFont = *-Bold
 ]
 
-\renewcommand{\familydefault}{\sfdefault}
+\renewcommand{\familydefault}{\rmdefault}
 
 % Global Caption Styling
 \captionsetup{
