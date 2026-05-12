@@ -22,6 +22,8 @@
 \RequirePackage{xstring}
 \RequirePackage{letltxmacro}
 \RequirePackage{etoolbox}
+\RequirePackage[normalem]{ulem}
+\renewcommand{\underline}[1]{\uline{#1}}
 
 % XeLaTeX Font Setup
 \RequirePackage{fontspec}
@@ -443,7 +445,11 @@
                 \ifthenelse{\equal{#2}{header}}{%
                     \hyperref[#3]{#1 (\nameref*{#3}\ p.\,\pageref*{#3})}%
                 }{%
-                    \hyperref[#3]{#1 (\cref*{#3})}%
+                    \ifthenelse{\equal{#2}{image}\OR\equal{#2}{table}\OR\equal{#2}{codeBlock}}{%
+                        \hyperref[#3]{#1 (\cref*{#3}\ p.\,\pageref*{#3})}%
+                    }{%
+                        \hyperref[#3]{#1}%
+                    }%
                 }%
             }%
         \else
