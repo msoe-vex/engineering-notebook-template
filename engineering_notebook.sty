@@ -188,10 +188,38 @@
 % Custom Block Header Command
 \newcommand{\blockheader}[2]{{\noindent\textbf{#1\if\relax\detokenize{#2}\relax\else: #2\fi}\par\nopagebreak\medskip}}
 
+% Custom Listings Language Definitions for Modern Languages
+\lstdefinelanguage{JavaScript}{
+    keywords={break, case, catch, class, const, continue, debugger, default, delete, do, else, export, extends, false, finally, for, function, if, import, in, instanceof, new, null, return, super, switch, this, throw, true, try, typeof, var, void, while, with, yield, let, static},
+    sensitive=true,
+    comment=[l]{//},
+    morecomment=[s]{/*}{*/},
+    morestring=[b]',
+    morestring=[b]"
+}
+
+\lstdefinelanguage{Rust}{
+    keywords={as, async, await, break, const, continue, crate, dyn, else, enum, extern, false, fn, for, if, impl, in, let, loop, match, mod, move, mut, pub, ref, return, self, Self, static, struct, super, trait, true, type, union, unsafe, use, where, while},
+    sensitive=true,
+    comment=[l]{//},
+    morecomment=[s]{/*}{*/},
+    morestring=[b]",
+    morestring=[b]'
+}
+
+\lstdefinelanguage{Go}{
+    keywords={break, default, func, interface, select, case, defer, go, map, struct, chan, else, goto, package, switch, const, fallthrough, if, range, type, continue, for, import, return, var},
+    sensitive=true,
+    comment=[l]{//},
+    morecomment=[s]{/*}{*/},
+    morestring=[b]",
+    morestring=[b]'
+}
+
 % Code Highlighting Setup
 \lstset{
     language=C++,
-    basicstyle=\ttfamily\small,
+    basicstyle=\ttfamily\footnotesize,
     keywordstyle=\color{blue}\bfseries,
     stringstyle=\color{red},
     commentstyle=\color{green!50!black}\itshape,
@@ -199,7 +227,7 @@
     numbers=left,
     numberstyle=\tiny\color{gray},
     stepnumber=1,
-    numbersep=10pt,
+    numbersep=6pt,
     backgroundcolor=\color{white},
     showspaces=false,
     showstringspaces=false,
@@ -211,8 +239,8 @@
     breaklines=true,
     breakatwhitespace=false,
     title=\lstname,
-    xleftmargin=18pt,
-    framexleftmargin=15pt,
+    xleftmargin=22pt,
+    framexleftmargin=18pt,
     escapeinside={\%*}{*)}
 }
 
@@ -511,7 +539,7 @@
     \label{#4}%
     \lstset{
         language=#1,
-        basicstyle=\small\ttfamily,
+        basicstyle=\footnotesize\ttfamily,
         breaklines=true,
         belowskip=0pt,
         keywordstyle=\color{codekeyword}\bfseries,
