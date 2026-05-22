@@ -26,8 +26,6 @@
       - Initials for inserted pictures, graphs, etc.
       - Signatures and dates for writer and witness
 
-##
-
 ## Start of season
 
 ### Team roles
@@ -83,10 +81,6 @@
       - Recommend initial improvements
       - Event reflections
 
-#
-
-# Practices
-
 ## Team/Project Management
 
 ### Team Roles/Norms
@@ -133,7 +127,7 @@
       - What were the challenges of this year's game that you considered before designing your robot? How did you design your robot to meet those challenges?
       - What are your goals for Driver and Autonomous Coding Skills scores? What are your average scores?
 
-# Resources
+## Resources
 
 [VRC Engineering Notebook Basics](https://vrc-kb.recf.org/hc/en-us/articles/9662003765399-VRC-Engineering-Notebook-Basics)
 
@@ -149,7 +143,7 @@
 
 [Team Interview Rubric](https://roboticseducation.org/documents/2023/06/team-interview-rubric-2.pdf/)
 
-# Examples
+## Examples
 
 [5062X Spin Up Notebook and Code](https://drive.google.com/file/d/1Escbya0Mjlg__ibyV6-B5iT_7iRT0OlI/view?usp=sharing)
 
