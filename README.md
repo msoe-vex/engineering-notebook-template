@@ -9,7 +9,6 @@ Install these tools before running the notebook build scripts:
 1. **[MiKTeX](https://miktex.org/download)** - the LaTeX distribution used to compile the PDF
 2. **[Strawberry Perl](https://strawberryperl.com/)** - required by the build automation on Windows.
 3. **[LaTeXML](https://dlmf.nist.gov/LaTeXML/):** used to generate the final rendered PDF.
-4. **[LaTeX Workshop](https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop)** - optional VS Code extension if you want editor-side PDF builds.
 
 Run this command in the terminal to install LaTeXML via CPAN:
 
@@ -21,16 +20,20 @@ cpan LaTeXML
 
 The main entry point is `main.tex`.
 
-- Build the PDF from VS Code with the LaTeX Workshop play button, or press `Ctrl+Alt+B`.
-- The compiled PDF is written next to the source as `main.pdf`.
+Run this command in the terminal to build the PDF and preview output:
 
-Use the provided scripts to generate the final rendered PDF:
+```shell
+latexmk -pdfxe -interaction=nonstopmode main.tex
+```
 
-- Windows: `build.bat`
-- Linux/macOS: `./build.sh`
+Or, use `build.bat` if you're on Windows and have the prerequisites installed.
 
 ## Notes
 
 - Keep notebook content, generated LaTeX, and preview output in sync when making notebook changes.
 - If build tools are installed after the terminal is already open, restart the terminal or VS Code so the PATH updates are picked up.
 - When updating notebook structure or styles, verify both the PDF and the HTML preview.
+
+## Customization
+
+You can customize the notebook by modifying the LaTeX source files. The main structure is defined in `main.tex`, while styles and formatting are controlled by `engineering_notebook.sty`. You can also add custom LaTeX packages or commands as needed. Just make sure to keep the required commands for the JSON-to-LaTeX conversion logic. These commands are documented in `engineering_notebook.sty` and should be preserved to ensure the editor can generate the notebook correctly, but they can be modified as needed to change the visual output.
