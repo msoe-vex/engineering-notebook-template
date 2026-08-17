@@ -4,7 +4,7 @@ This folder contains the standalone LaTeX source for the notebook PDF template u
 
 ## Prerequisites
 
-To build the PDF locally or crawl template packages for the web editor (`npm run bundle:latex`), install a TeX distribution that includes **XeLaTeX**:
+To build the PDF locally or crawl template packages for the web editor (`npm run bundle:template`), install a TeX distribution that includes **XeLaTeX**:
 
 ### Option 1: TeX Live (Recommended)
 
